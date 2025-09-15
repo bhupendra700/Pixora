@@ -13,12 +13,11 @@ import { Bounce, toast, ToastContainer } from 'react-toastify';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from './Component/Firebase';
 import Collection from './Component/AI/Collections'
-import axios from 'axios';
 
 const GlobalContext = createContext();
 const App = () => {
 
-  const backendURL = 'http://localhost:8000'
+  const backendURL = 'https://pixora-cac8.onrender.com'
 
   //notification
   const notify = (message, method) => {
