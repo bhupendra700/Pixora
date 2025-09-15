@@ -9,8 +9,8 @@ const port = process.env.PORT || 8000;
 const fs = require("fs")
 const Collection = require("./Models/Collection.js");
 const mongoose = require("mongoose");
-const axios = require("axios")
-const FormData = require("form-data")
+const axios = require("axios");
+const FormData = require("form-data");
 
 
 const origin = ["https://pixorafree.netlify.app"];
