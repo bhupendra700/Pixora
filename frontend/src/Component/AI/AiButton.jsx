@@ -1,5 +1,5 @@
 import logo from '../../Images/logo.png';
-import '../../CSS/AI/aibutton.css';
+import '../../CSS/AI/aibutton.css'
 
 const AiButton = ({setAi}) => {
   return <section className='ai-button' onClick={()=>{setAi(true)}}>

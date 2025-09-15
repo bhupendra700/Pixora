@@ -40,7 +40,7 @@ const connectDB = async () => {
 connectDB();
 
 app.get('/', (req, res) => {
-    return res.send("hello world")
+    return res.send("hello world");
 })
 
 app.post('/upload', upload.single("sendfile"), async (req, res) => {
