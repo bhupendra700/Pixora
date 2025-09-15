@@ -1,0 +1,61 @@
+.footer{
+    // background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+
+    h2{
+        .link{
+            font-family: rezland ,sans-serif;
+            font-size: 40px;
+            cursor: pointer;
+            text-decoration: none;
+            color: black;
+            font-weight: 550;
+        }
+    }
+
+    .social{
+        // background-color: red;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .icon{
+            background-color: rgba(0, 0, 0, 0.18);
+            text-decoration: none;
+            font-size: 20px;
+            padding: 5px;
+            border-radius: 8px;
+            display: flex;
+
+         &.insta{
+            color: palevioletred;
+         }
+
+         &.pinterest{
+            color: red;
+         }
+
+         &.twitter{
+            color: black;
+         }
+
+         &.fb{
+            color: blue;
+         }
+         
+        }
+    }
+
+    p{
+        font-size: 13px;
+        color: rgba(0, 0, 0, 0.436);
+        cursor: context-menu;
+    }
+}

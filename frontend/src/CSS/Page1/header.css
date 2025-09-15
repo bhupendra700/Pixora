@@ -1,0 +1,618 @@
+.main-container-x {
+  position: static;
+}
+.main-container-x header {
+  padding: 10px 20px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  color: white;
+}
+.main-container-x header .logo {
+  text-decoration: none;
+}
+.main-container-x header .logo .long {
+  font-family: rezland, sans-serif;
+  font-size: 38px;
+  cursor: pointer;
+  color: black;
+}
+.main-container-x header .logo .short {
+  font-family: rezland, sans-serif;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 33px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+.main-container-x header .search {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  background-color: #f6f6f6;
+  border-radius: 40px;
+  width: 100%;
+}
+.main-container-x header .search:hover {
+  background-color: rgb(233.25, 233.25, 233.25);
+}
+.main-container-x header .search:hover .search-icon {
+  color: rgba(0, 0, 0, 0.7843137255);
+}
+.main-container-x header .search:hover input {
+  background-color: rgb(233.25, 233.25, 233.25);
+}
+.main-container-x header .search:hover input::placeholder {
+  color: black;
+}
+.main-container-x header .search .search-icon {
+  padding: 0 10px;
+  cursor: pointer;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6039215686);
+}
+.main-container-x header .search input {
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: #f6f6f6;
+  border-radius: 0 40px 40px 0;
+  font-size: 15px;
+  padding: 10px 10px 10px 0;
+}
+.main-container-x header .search input:focus::placeholder {
+  color: #757575;
+}
+.main-container-x header .search input::placeholder {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+}
+.main-container-x header .search details {
+  position: relative;
+  font-weight: 580;
+  border-radius: 20px;
+  font-size: 15px;
+}
+.main-container-x header .search details:hover {
+  background-color: rgb(220.5, 220.5, 220.5);
+}
+.main-container-x header .search details[open] summary i {
+  transform: rotate(-180deg);
+}
+.main-container-x header .search details summary {
+  padding: 10px 20px;
+  text-wrap: nowrap;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: black;
+}
+.main-container-x header .search details summary::-webkit-details-marker {
+  display: none;
+}
+.main-container-x header .search details summary i {
+  font-size: 20px;
+  transition: all 0.1s linear;
+}
+.main-container-x header .search details div {
+  position: absolute;
+  display: grid;
+  width: 200px;
+  right: 0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  margin-top: 5px;
+  color: rgba(0, 0, 0, 0.621);
+  background-color: white;
+  z-index: 1;
+}
+.main-container-x header .search details div .cat-1,
+.main-container-x header .search details div .cat-3 {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 8px;
+}
+.main-container-x header .search details div .cat-1:hover,
+.main-container-x header .search details div .cat-3:hover {
+  background-color: rgba(117, 117, 117, 0.0941176471);
+  color: #00ab6b;
+}
+.main-container-x header .search details div .cat-1.green,
+.main-container-x header .search details div .cat-3.green {
+  color: #00ab6b;
+}
+.main-container-x header .search details div .cat-2 p {
+  padding: 10px;
+  padding-left: 30px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.main-container-x header .search details div .cat-2 p:hover {
+  background-color: rgba(117, 117, 117, 0.0941176471);
+  color: #00ab6b;
+}
+.main-container-x header .search details div .cat-2 p.green {
+  color: #00ab6b;
+}
+.main-container-x header .login button {
+  background-color: transparent;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 20px;
+  font-weight: 580;
+  font-size: 15px;
+  text-wrap: nowrap;
+  cursor: pointer;
+  color: black;
+}
+.main-container-x header .login button:hover {
+  background-color: rgba(62, 61, 61, 0.078);
+}
+.main-container-x header .join button {
+  background-color: white;
+  border: 1px solid rgba(246, 246, 246, 0.2156862745);
+  border: 1px solid rgba(13, 13, 13, 0.2156862745);
+  padding: 10px 18px;
+  border-radius: 20px;
+  font-weight: 580;
+  font-size: 15px;
+  text-wrap: nowrap;
+  cursor: pointer;
+  color: black;
+}
+.main-container-x header .join button:hover {
+  background-color: rgba(72, 70, 70, 0.0549019608);
+}
+.main-container-x header .user {
+  position: relative;
+}
+.main-container-x header .user summary {
+  list-style: none;
+  height: 45px;
+  width: 45px;
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  cursor: pointer;
+  overflow: hidden;
+}
+.main-container-x header .user summary img {
+  height: 100%;
+  width: 100%;
+}
+.main-container-x header .user .profile {
+  position: absolute;
+  background-color: black;
+  color: white;
+  display: grid;
+  right: 0;
+  padding: 20px 15px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  margin-top: 2px;
+  z-index: 15;
+}
+.main-container-x header .user .profile .box,
+.main-container-x header .user .profile button {
+  color: rgba(255, 255, 255, 0.862745098);
+  font-size: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 10px;
+}
+.main-container-x header .user .profile .box:hover,
+.main-container-x header .user .profile button:hover {
+  background-color: rgba(117, 117, 117, 0.4156862745);
+  color: #ffffff;
+}
+.main-container-x header .user .profile .box:nth-child(2) {
+  cursor: context-menu;
+}
+.main-container-x header .user .profile button {
+  background-color: transparent;
+  border: none;
+  text-align: start;
+}
+.main-container-x header .user .profile .name {
+  font-weight: 700;
+  color: white;
+  padding: 10px;
+  cursor: default;
+}
+.main-container-x header .user .profile .safesearch {
+  padding: 5px 0;
+  min-width: 230px;
+  border-style: solid;
+  border-width: 1px 0;
+  border-color: rgba(255, 255, 255, 0.3411764706);
+  margin: 5px 0;
+}
+.main-container-x header .user .profile .safesearch .switchlabel {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+.main-container-x header .user .profile .safesearch .switchlabel .safeSearch-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+.main-container-x header .user .profile .safesearch .switchlabel .safeSearch-container .switch {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 45px;
+  height: auto;
+  border-radius: 20px;
+  padding: 4px;
+  background-color: #2c2a2a;
+}
+.main-container-x header .user .profile .safesearch .switchlabel .safeSearch-container .switch input {
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: rgb(221, 219, 219);
+  cursor: pointer;
+  transition: transform 0.2s linear;
+}
+.main-container-x header .user .profile .safesearch .switchlabel .safeSearch-container .switch input:checked {
+  transform: translateX(16px);
+}
+.main-container-x header .user .profile .safesearch .switchlabel .safeSearch-container .switchon {
+  background-color: #058d5b;
+}
+.main-container-x header .user .profile .safesearch .switchlabel:hover .switch {
+  background-color: #464444;
+}
+.main-container-x header .user .profile .safesearch .switchlabel:hover .switch input {
+  background-color: white;
+}
+.main-container-x header .user .profile .safesearch .switchlabel:hover .switchon {
+  background-color: #09d88c;
+}
+.main-container-x header .user .profile .safesearch .switchlabel:hover .switchon input {
+  background-color: white;
+}
+.main-container-x header .user .profile .safesearch .switchlabel .safesearch-info {
+  display: flex;
+  position: relative;
+  padding: 5px;
+}
+.main-container-x header .user .profile .safesearch .switchlabel .safesearch-info:hover .safesearchmessage {
+  display: block;
+}
+.main-container-x header .user .profile .safesearch .switchlabel .safesearch-info .safesearchmessage {
+  position: absolute;
+  display: none;
+  right: 50%;
+  top: 0;
+  transform: translate(50%, -100%);
+  background-color: black;
+  width: 250px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+.main-container-x header .logout {
+  background-color: transparent;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 20px;
+  font-weight: 580;
+  font-size: 15px;
+  text-wrap: nowrap;
+  cursor: pointer;
+}
+.main-container-x header .logout:hover {
+  background-color: rgba(77, 74, 74, 0.0941176471);
+}
+.main-container-x header .user-hameburgur {
+  font-weight: 800;
+  font-size: 20px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  color: black;
+}
+.main-container-x header .user-hameburgur:hover {
+  background-color: rgba(115, 112, 112, 0.1450980392);
+}
+.main-container-x .hem-menu-container {
+  background-color: transparent;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 3;
+}
+.main-container-x .hem-menu-container.go .hem-menu {
+  animation: go 0.25s linear;
+}
+.main-container-x .hem-menu-container .hem-menu {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  animation: come 0.25s linear;
+  display: flex;
+  flex-direction: column;
+}
+.main-container-x .hem-menu-container .hem-menu .hem-menu-slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  overflow: auto;
+  gap: 20px;
+}
+.main-container-x .hem-menu-container .hem-menu .hem-menu-slider .hem-menu-footer {
+  display: flex;
+  gap: 10px;
+  width: min(250px, 100%);
+  justify-content: space-between;
+  margin: 0 auto;
+  overflow: auto;
+  flex-shrink: 0;
+}
+.main-container-x .hem-menu-container .hem-menu .hem-menu-slider .hem-menu-footer .insta,
+.main-container-x .hem-menu-container .hem-menu .hem-menu-slider .hem-menu-footer .pinterest,
+.main-container-x .hem-menu-container .hem-menu .hem-menu-slider .hem-menu-footer .twitter,
+.main-container-x .hem-menu-container .hem-menu .hem-menu-slider .hem-menu-footer .fb {
+  background-color: rgba(67, 71, 70, 0.6941176471);
+  display: flex;
+  padding: 3px;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.main-container-x .hem-menu-container .hem-menu .hem-menu-slider .hem-menu-footer .insta i,
+.main-container-x .hem-menu-container .hem-menu .hem-menu-slider .hem-menu-footer .pinterest i,
+.main-container-x .hem-menu-container .hem-menu .hem-menu-slider .hem-menu-footer .twitter i,
+.main-container-x .hem-menu-container .hem-menu .hem-menu-slider .hem-menu-footer .fb i {
+  cursor: pointer;
+  font-size: 25px;
+}
+.main-container-x .hem-menu-container .hem-menu .hem-menu-slider .hem-menu-footer .insta {
+  color: #ff03bc;
+}
+.main-container-x .hem-menu-container .hem-menu .hem-menu-slider .hem-menu-footer .pinterest {
+  color: red;
+}
+.main-container-x .hem-menu-container .hem-menu .hem-menu-slider .hem-menu-footer .twitter {
+  color: white;
+}
+.main-container-x .hem-menu-container .hem-menu .hem-menu-slider .hem-menu-footer .fb {
+  color: blue;
+}
+.main-container-x .hem-menu-container .login {
+  background-color: #191b26;
+  color: white;
+}
+.main-container-x .hem-menu-container .login .hem-menu-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.114);
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+  cursor: context-menu;
+}
+.main-container-x .hem-menu-container .login .hem-menu-header .accaunt-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden !important;
+}
+.main-container-x .hem-menu-container .login .hem-menu-header .accaunt-logo .account-img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.main-container-x .hem-menu-container .login .hem-menu-header .accaunt-logo .account-img img {
+  height: 100%;
+  width: 100%;
+}
+.main-container-x .hem-menu-container .login .hem-menu-header .accaunt-logo div {
+  background-color: #191b26;
+  max-width: 300px;
+  overflow: hidden;
+  font-weight: 600;
+  color: white;
+}
+.main-container-x .hem-menu-container .login .hem-menu-header i {
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 15px;
+  padding: 5px;
+}
+.main-container-x .hem-menu-container .login .hem-menu-slider {
+  padding: 15px 25px;
+}
+.main-container-x .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-email {
+  cursor: context-menu;
+  word-break: break-all;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 8px;
+  border-radius: 5px;
+}
+.main-container-x .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-email:hover {
+  background-color: rgba(255, 255, 255, 0.233);
+}
+.main-container-x .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-main-editprofile {
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.main-container-x .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-main-editprofile:hover {
+  background-color: rgba(255, 255, 255, 0.233);
+}
+.main-container-x .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-safeSearch {
+  padding: 8px;
+  font-size: 17px;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: rgba(166, 164, 164, 0.139);
+  margin: 10px 0;
+}
+.main-container-x .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-safeSearch label {
+  display: block;
+  cursor: pointer;
+}
+.main-container-x .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-safeSearch label:hover .safeSearch-con .switch-con {
+  background-color: rgba(245, 240, 240, 0.276);
+}
+.main-container-x .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-safeSearch label input {
+  display: none;
+}
+.main-container-x .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-safeSearch label .safeSearch-con {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 18px 0;
+  gap: 10px;
+}
+.main-container-x .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-safeSearch label .safeSearch-con .text {
+  flex-grow: 1;
+  font-weight: 500;
+}
+.main-container-x .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-safeSearch label .safeSearch-con .switch-con {
+  background-color: rgba(245, 240, 240, 0.151);
+  height: 25px;
+  width: 40px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 3px;
+}
+.main-container-x .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-safeSearch label .safeSearch-con .switch-con div {
+  background-color: white;
+  height: 21px;
+  width: 21px;
+  border-radius: 50%;
+  transition: all 0.13s linear;
+}
+.main-container-x .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-safeSearch label .safeSearch-message {
+  font-size: 12px;
+  padding-bottom: 15px;
+}
+.main-container-x .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-safeSearch label input:checked + .safeSearch-con .switch-con {
+  background-color: #00ab6b;
+}
+.main-container-x .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-safeSearch label input:checked + .safeSearch-con .switch-con div {
+  transition: all 0.13s linear;
+  transform: translateX(13px);
+}
+.main-container-x .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-safeSearch label:hover input:checked + .safeSearch-con .switch-con {
+  background-color: #0ec884;
+}
+.main-container-x .hem-menu-container .login .hem-menu-slider .hem-menu-main-user button {
+  width: 100%;
+  text-align: start;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  background-color: transparent;
+}
+.main-container-x .hem-menu-container .login .hem-menu-slider .hem-menu-main-user button:hover {
+  background-color: rgba(108, 104, 104, 0.226);
+}
+.main-container-x .hem-menu-container .login .hem-menu-slider .hem-menu-footer .insta,
+.main-container-x .hem-menu-container .login .hem-menu-slider .hem-menu-footer .pinterest,
+.main-container-x .hem-menu-container .login .hem-menu-slider .hem-menu-footer .twitter,
+.main-container-x .hem-menu-container .login .hem-menu-slider .hem-menu-footer .fb {
+  background-color: rgba(67, 71, 70, 0.6941176471);
+}
+.main-container-x .hem-menu-container .hem {
+  background-color: white;
+  color: black;
+}
+.main-container-x .hem-menu-container .hem .hem-menu-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.098);
+  padding: 12px 15px;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-container-x .hem-menu-container .hem .hem-menu-header .logo {
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-family: rezland, sans-serif;
+  font-size: 35px;
+}
+.main-container-x .hem-menu-container .hem .hem-menu-header i {
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 15px;
+  padding: 5px;
+}
+.main-container-x .hem-menu-container .hem .hem-menu-header i:hover {
+  background-color: rgba(0, 0, 0, 0.043);
+}
+.main-container-x .hem-menu-container .hem .hem-menu-slider {
+  padding: 15px;
+}
+.main-container-x .hem-menu-container .hem .hem-menu-slider .hem-menu-main-hem {
+  display: flex;
+  flex-direction: column;
+  color: #6c6d74;
+}
+.main-container-x .hem-menu-container .hem .hem-menu-slider .hem-menu-main-hem div {
+  padding: 15px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.main-container-x .hem-menu-container .hem .hem-menu-slider .hem-menu-main-hem div:hover {
+  background-color: rgba(25, 27, 38, 0.1294117647);
+}
+.main-container-x .hem-menu-container .hem .hem-menu-slider .hem-menu-main-hem div.green {
+  color: #09d88c;
+}
+.main-container-x .hem-menu-container .hem .hem-menu-slider .hem-menu-main-hem div:nth-child(1) {
+  font-weight: 600;
+}
+.main-container-x .hem-menu-container .hem .hem-menu-slider .hem-menu-main-hem div:not(:nth-child(1)) {
+  padding-left: 25px;
+  font-weight: 350;
+  font-size: 14px;
+}
+.main-container-x .hem-menu-container .hem .hem-menu-slider .hem-menu-main-hem div:not(:nth-child(1)):hover {
+  color: #09d88c;
+}
+.main-container-x .hem-menu-container .hem .hem-menu-slider .hem-menu-main-hem div:not(:nth-child(1)) i {
+  font-size: 20px;
+}
+.main-container-x .hem-menu-container .hem .hem-menu-slider .hem-menu-footer .insta,
+.main-container-x .hem-menu-container .hem .hem-menu-slider .hem-menu-footer .pinterest,
+.main-container-x .hem-menu-container .hem .hem-menu-slider .hem-menu-footer .twitter,
+.main-container-x .hem-menu-container .hem .hem-menu-slider .hem-menu-footer .fb {
+  background-color: rgba(205, 211, 210, 0.5254901961);
+}
+.main-container-x .hem-menu-container .hem .hem-menu-slider .hem-menu-footer .twitter {
+  color: black;
+}

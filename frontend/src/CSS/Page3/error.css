@@ -1,0 +1,214 @@
+.error-con {
+  background: url("../../Images/error.jpg");
+  background-color: rgba(0, 0, 0, 0.237);
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: darken;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: auto;
+  gap: 20px;
+}
+.error-con .error-header {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+.error-con .error-header .logo .link {
+  text-decoration: none;
+  color: black;
+  font-family: rezland, sans-serif;
+  font-size: 35px;
+  display: block;
+  font-weight: 600;
+}
+.error-con .error-header .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.error-con .error-header .buttons button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: transparent;
+}
+.error-con .error-header .buttons button:hover {
+  background-color: rgba(0, 0, 0, 0.11);
+}
+.error-con .error-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+.error-con .error-main .message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  color: white;
+  cursor: context-menu;
+}
+.error-con .error-main .message p {
+  font-weight: 400;
+  font-size: 24px;
+}
+.error-con .error-main .message h1 {
+  font-size: 40px;
+  font-weight: 500;
+  text-align: center;
+}
+.error-con .error-main .search {
+  background-color: white;
+  display: flex;
+  padding: 5px;
+  justify-content: center;
+  align-items: stretch;
+  width: min(650px, 90%);
+  border-radius: 5px;
+}
+.error-con .error-main .search > i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  flex-shrink: 0;
+  font-size: 22px;
+}
+.error-con .error-main .search input {
+  outline: none;
+  border: none;
+  padding: 15px 10px;
+  font-size: 16px;
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.error-con .error-main .search details {
+  flex-shrink: 0;
+  position: relative;
+}
+.error-con .error-main .search details summary {
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 15px;
+  border-radius: 100px;
+  cursor: pointer;
+  gap: 5px;
+}
+.error-con .error-main .search details summary:hover {
+  background-color: rgba(0, 0, 0, 0.078);
+}
+.error-con .error-main .search details > div {
+  position: absolute;
+  right: 0;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgb(241, 238, 238) 0px 1px 4px;
+  padding: 10px;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.error-con .error-main .search details > div > .cat1 {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.683);
+  cursor: pointer;
+  transition: all 0.1s linear;
+}
+.error-con .error-main .search details > div > .cat1:hover {
+  background-color: rgba(0, 0, 0, 0.123);
+  color: black;
+}
+.error-con .error-main .search details > div > .cat2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+.error-con .error-main .search details > div > .cat2 p {
+  padding: 5px 30px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.683);
+  cursor: pointer;
+}
+.error-con .error-main .search details > div > .cat2 p:hover {
+  background-color: rgba(0, 0, 0, 0.123);
+  color: black;
+}
+.error-con .error-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+}
+.error-con .error-footer h2 .link {
+  font-family: rezland, sans-serif;
+  font-size: 35px;
+  color: white;
+  list-style: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+.error-con .error-footer .social {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.error-con .error-footer .social .icon {
+  background-color: rgba(0, 0, 0, 0.18);
+  text-decoration: none;
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 8px;
+  display: flex;
+}
+.error-con .error-footer .social .icon.insta {
+  color: palevioletred;
+}
+.error-con .error-footer .social .icon.pinterest {
+  color: red;
+}
+.error-con .error-footer .social .icon.twitter {
+  color: white;
+}
+.error-con .error-footer .social .icon.fb {
+  color: blue;
+}
+.error-con .error-footer p {
+  font-size: 13px;
+  color: white;
+  cursor: context-menu;
+}

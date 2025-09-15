@@ -1,0 +1,48 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+}
+.footer h2 .link {
+  font-family: rezland, sans-serif;
+  font-size: 40px;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  font-weight: 550;
+}
+.footer .social {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.footer .social .icon {
+  background-color: rgba(0, 0, 0, 0.18);
+  text-decoration: none;
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 8px;
+  display: flex;
+}
+.footer .social .icon.insta {
+  color: palevioletred;
+}
+.footer .social .icon.pinterest {
+  color: red;
+}
+.footer .social .icon.twitter {
+  color: black;
+}
+.footer .social .icon.fb {
+  color: blue;
+}
+.footer p {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.436);
+  cursor: context-menu;
+}

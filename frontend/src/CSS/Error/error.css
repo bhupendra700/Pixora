@@ -1,0 +1,690 @@
+.error-con {
+  background: url("../../Images/error.jpg");
+  background-color: rgba(0, 0, 0, 0.237);
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: darken;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: auto;
+  gap: 20px;
+}
+.error-con .error-header {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+.error-con .error-header .logo {
+  text-decoration: none;
+}
+.error-con .error-header .logo .long {
+  font-family: rezland, sans-serif;
+  font-size: 38px;
+  cursor: pointer;
+  color: black;
+}
+.error-con .error-header .logo .short {
+  font-family: rezland, sans-serif;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 33px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+.error-con .error-header .auth {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.error-con .error-header .auth .login button {
+  background-color: transparent;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 20px;
+  font-weight: 580;
+  font-size: 15px;
+  text-wrap: nowrap;
+  cursor: pointer;
+  color: black;
+}
+.error-con .error-header .auth .login button:hover {
+  background-color: rgba(62, 61, 61, 0.078);
+}
+.error-con .error-header .auth .join button {
+  background-color: white;
+  border: 1px solid rgba(246, 246, 246, 0.2156862745);
+  border: 1px solid rgba(13, 13, 13, 0.2156862745);
+  padding: 10px 18px;
+  border-radius: 20px;
+  font-weight: 580;
+  font-size: 15px;
+  text-wrap: nowrap;
+  cursor: pointer;
+  color: black;
+}
+.error-con .error-header .auth .join button:hover {
+  background-color: rgba(72, 70, 70, 0.0549019608);
+}
+.error-con .error-header .auth .user {
+  position: relative;
+}
+.error-con .error-header .auth .user summary {
+  list-style: none;
+  height: 45px;
+  width: 45px;
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  cursor: pointer;
+  overflow: hidden;
+}
+.error-con .error-header .auth .user summary img {
+  height: 100%;
+  width: 100%;
+}
+.error-con .error-header .auth .user .profile {
+  position: absolute;
+  background-color: black;
+  color: white;
+  display: grid;
+  right: 0;
+  padding: 20px 15px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  margin-top: 2px;
+  z-index: 15;
+}
+.error-con .error-header .auth .user .profile .box,
+.error-con .error-header .auth .user .profile button {
+  color: rgba(255, 255, 255, 0.862745098);
+  font-size: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 10px;
+}
+.error-con .error-header .auth .user .profile .box:hover,
+.error-con .error-header .auth .user .profile button:hover {
+  background-color: rgba(117, 117, 117, 0.4156862745);
+  color: #ffffff;
+}
+.error-con .error-header .auth .user .profile .box:nth-child(2) {
+  cursor: context-menu;
+}
+.error-con .error-header .auth .user .profile button {
+  background-color: transparent;
+  border: none;
+  text-align: start;
+}
+.error-con .error-header .auth .user .profile .name {
+  font-weight: 700;
+  color: white;
+  padding: 10px;
+  cursor: default;
+}
+.error-con .error-header .auth .user .profile .safesearch {
+  padding: 5px 0;
+  min-width: 230px;
+  border-style: solid;
+  border-width: 1px 0;
+  border-color: rgba(255, 255, 255, 0.3411764706);
+  margin: 5px 0;
+}
+.error-con .error-header .auth .user .profile .safesearch .switchlabel {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+.error-con .error-header .auth .user .profile .safesearch .switchlabel .safeSearch-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+.error-con .error-header .auth .user .profile .safesearch .switchlabel .safeSearch-container .switch {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 45px;
+  height: auto;
+  border-radius: 20px;
+  padding: 4px;
+  background-color: #2c2a2a;
+}
+.error-con .error-header .auth .user .profile .safesearch .switchlabel .safeSearch-container .switch input {
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: rgb(221, 219, 219);
+  cursor: pointer;
+  transition: transform 0.2s linear;
+}
+.error-con .error-header .auth .user .profile .safesearch .switchlabel .safeSearch-container .switch input:checked {
+  transform: translateX(16px);
+}
+.error-con .error-header .auth .user .profile .safesearch .switchlabel .safeSearch-container .switchon {
+  background-color: #058d5b;
+}
+.error-con .error-header .auth .user .profile .safesearch .switchlabel:hover .switch {
+  background-color: #464444;
+}
+.error-con .error-header .auth .user .profile .safesearch .switchlabel:hover .switch input {
+  background-color: white;
+}
+.error-con .error-header .auth .user .profile .safesearch .switchlabel:hover .switchon {
+  background-color: #09d88c;
+}
+.error-con .error-header .auth .user .profile .safesearch .switchlabel:hover .switchon input {
+  background-color: white;
+}
+.error-con .error-header .auth .user .profile .safesearch .switchlabel .safesearch-info {
+  display: flex;
+  position: relative;
+  padding: 5px;
+}
+.error-con .error-header .auth .user .profile .safesearch .switchlabel .safesearch-info:hover .safesearchmessage {
+  display: block;
+}
+.error-con .error-header .auth .user .profile .safesearch .switchlabel .safesearch-info .safesearchmessage {
+  position: absolute;
+  display: none;
+  right: 50%;
+  top: 0;
+  transform: translate(50%, -100%);
+  background-color: black;
+  width: 250px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+.error-con .error-header .auth .logout {
+  background-color: transparent;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 20px;
+  font-weight: 580;
+  font-size: 15px;
+  text-wrap: nowrap;
+  cursor: pointer;
+}
+.error-con .error-header .auth .logout:hover {
+  background-color: rgba(77, 74, 74, 0.0941176471);
+}
+.error-con .error-header .auth .user-hameburgur {
+  font-weight: 800;
+  font-size: 20px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  color: black;
+}
+.error-con .error-header .auth .user-hameburgur:hover {
+  background-color: rgba(115, 112, 112, 0.1450980392);
+}
+.error-con .hem-menu-container {
+  background-color: transparent;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 3;
+}
+.error-con .hem-menu-container.go .hem-menu {
+  animation: go 0.25s linear;
+}
+.error-con .hem-menu-container .hem-menu {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  animation: come 0.25s linear;
+  display: flex;
+  flex-direction: column;
+}
+.error-con .hem-menu-container .hem-menu .hem-menu-slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  overflow: auto;
+  gap: 20px;
+}
+.error-con .hem-menu-container .hem-menu .hem-menu-slider .hem-menu-footer {
+  display: flex;
+  gap: 10px;
+  width: min(250px, 100%);
+  justify-content: space-between;
+  margin: 0 auto;
+  overflow: auto;
+  flex-shrink: 0;
+}
+.error-con .hem-menu-container .hem-menu .hem-menu-slider .hem-menu-footer .insta,
+.error-con .hem-menu-container .hem-menu .hem-menu-slider .hem-menu-footer .pinterest,
+.error-con .hem-menu-container .hem-menu .hem-menu-slider .hem-menu-footer .twitter,
+.error-con .hem-menu-container .hem-menu .hem-menu-slider .hem-menu-footer .fb {
+  background-color: rgba(67, 71, 70, 0.6941176471);
+  display: flex;
+  padding: 3px;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.error-con .hem-menu-container .hem-menu .hem-menu-slider .hem-menu-footer .insta i,
+.error-con .hem-menu-container .hem-menu .hem-menu-slider .hem-menu-footer .pinterest i,
+.error-con .hem-menu-container .hem-menu .hem-menu-slider .hem-menu-footer .twitter i,
+.error-con .hem-menu-container .hem-menu .hem-menu-slider .hem-menu-footer .fb i {
+  cursor: pointer;
+  font-size: 25px;
+}
+.error-con .hem-menu-container .hem-menu .hem-menu-slider .hem-menu-footer .insta {
+  color: #ff03bc;
+}
+.error-con .hem-menu-container .hem-menu .hem-menu-slider .hem-menu-footer .pinterest {
+  color: red;
+}
+.error-con .hem-menu-container .hem-menu .hem-menu-slider .hem-menu-footer .twitter {
+  color: white;
+}
+.error-con .hem-menu-container .hem-menu .hem-menu-slider .hem-menu-footer .fb {
+  color: blue;
+}
+.error-con .hem-menu-container .login {
+  background-color: #191b26;
+  color: white;
+}
+.error-con .hem-menu-container .login .hem-menu-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.114);
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+  cursor: context-menu;
+}
+.error-con .hem-menu-container .login .hem-menu-header .accaunt-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden !important;
+}
+.error-con .hem-menu-container .login .hem-menu-header .accaunt-logo .account-img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.error-con .hem-menu-container .login .hem-menu-header .accaunt-logo .account-img img {
+  height: 100%;
+  width: 100%;
+}
+.error-con .hem-menu-container .login .hem-menu-header .accaunt-logo div {
+  background-color: #191b26;
+  max-width: 300px;
+  overflow: hidden;
+  font-weight: 600;
+  color: white;
+}
+.error-con .hem-menu-container .login .hem-menu-header i {
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 15px;
+  padding: 5px;
+}
+.error-con .hem-menu-container .login .hem-menu-slider {
+  padding: 15px 25px;
+}
+.error-con .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-email {
+  cursor: context-menu;
+  word-break: break-all;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 8px;
+  border-radius: 5px;
+}
+.error-con .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-email:hover {
+  background-color: rgba(255, 255, 255, 0.233);
+}
+.error-con .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-main-editprofile {
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.error-con .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-main-editprofile:hover {
+  background-color: rgba(255, 255, 255, 0.233);
+}
+.error-con .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-safeSearch {
+  padding: 8px;
+  font-size: 17px;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: rgba(166, 164, 164, 0.139);
+  margin: 10px 0;
+}
+.error-con .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-safeSearch label {
+  display: block;
+  cursor: pointer;
+}
+.error-con .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-safeSearch label:hover .safeSearch-con .switch-con {
+  background-color: rgba(245, 240, 240, 0.276);
+}
+.error-con .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-safeSearch label input {
+  display: none;
+}
+.error-con .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-safeSearch label .safeSearch-con {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 18px 0;
+  gap: 10px;
+}
+.error-con .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-safeSearch label .safeSearch-con .text {
+  flex-grow: 1;
+  font-weight: 500;
+}
+.error-con .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-safeSearch label .safeSearch-con .switch-con {
+  background-color: rgba(245, 240, 240, 0.151);
+  height: 25px;
+  width: 40px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 3px;
+}
+.error-con .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-safeSearch label .safeSearch-con .switch-con div {
+  background-color: white;
+  height: 21px;
+  width: 21px;
+  border-radius: 50%;
+  transition: all 0.13s linear;
+}
+.error-con .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-safeSearch label .safeSearch-message {
+  font-size: 12px;
+  padding-bottom: 15px;
+}
+.error-con .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-safeSearch label input:checked + .safeSearch-con .switch-con {
+  background-color: #00ab6b;
+}
+.error-con .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-safeSearch label input:checked + .safeSearch-con .switch-con div {
+  transition: all 0.13s linear;
+  transform: translateX(13px);
+}
+.error-con .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-safeSearch label:hover input:checked + .safeSearch-con .switch-con {
+  background-color: #0ec884;
+}
+.error-con .hem-menu-container .login .hem-menu-slider .hem-menu-main-user button {
+  width: 100%;
+  text-align: start;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  background-color: transparent;
+}
+.error-con .hem-menu-container .login .hem-menu-slider .hem-menu-main-user button:hover {
+  background-color: rgba(108, 104, 104, 0.226);
+}
+.error-con .hem-menu-container .login .hem-menu-slider .hem-menu-footer .insta,
+.error-con .hem-menu-container .login .hem-menu-slider .hem-menu-footer .pinterest,
+.error-con .hem-menu-container .login .hem-menu-slider .hem-menu-footer .twitter,
+.error-con .hem-menu-container .login .hem-menu-slider .hem-menu-footer .fb {
+  background-color: rgba(67, 71, 70, 0.6941176471);
+}
+.error-con .hem-menu-container .hem {
+  background-color: white;
+  color: black;
+}
+.error-con .hem-menu-container .hem .hem-menu-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.098);
+  padding: 12px 15px;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+.error-con .hem-menu-container .hem .hem-menu-header .logo {
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-family: rezland, sans-serif;
+  font-size: 35px;
+}
+.error-con .hem-menu-container .hem .hem-menu-header i {
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 15px;
+  padding: 5px;
+}
+.error-con .hem-menu-container .hem .hem-menu-header i:hover {
+  background-color: rgba(0, 0, 0, 0.043);
+}
+.error-con .hem-menu-container .hem .hem-menu-slider {
+  padding: 15px;
+}
+.error-con .hem-menu-container .hem .hem-menu-slider .hem-menu-main-hem {
+  display: flex;
+  flex-direction: column;
+  color: #6c6d74;
+}
+.error-con .hem-menu-container .hem .hem-menu-slider .hem-menu-main-hem div {
+  padding: 15px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.error-con .hem-menu-container .hem .hem-menu-slider .hem-menu-main-hem div:hover {
+  background-color: rgba(25, 27, 38, 0.1294117647);
+}
+.error-con .hem-menu-container .hem .hem-menu-slider .hem-menu-main-hem div.green {
+  color: #09d88c;
+}
+.error-con .hem-menu-container .hem .hem-menu-slider .hem-menu-main-hem div:nth-child(1) {
+  font-weight: 600;
+}
+.error-con .hem-menu-container .hem .hem-menu-slider .hem-menu-main-hem div:not(:nth-child(1)) {
+  padding-left: 25px;
+  font-weight: 350;
+  font-size: 14px;
+}
+.error-con .hem-menu-container .hem .hem-menu-slider .hem-menu-main-hem div:not(:nth-child(1)):hover {
+  color: #09d88c;
+}
+.error-con .hem-menu-container .hem .hem-menu-slider .hem-menu-main-hem div:not(:nth-child(1)) i {
+  font-size: 20px;
+}
+.error-con .hem-menu-container .hem .hem-menu-slider .hem-menu-footer .insta,
+.error-con .hem-menu-container .hem .hem-menu-slider .hem-menu-footer .pinterest,
+.error-con .hem-menu-container .hem .hem-menu-slider .hem-menu-footer .twitter,
+.error-con .hem-menu-container .hem .hem-menu-slider .hem-menu-footer .fb {
+  background-color: rgba(205, 211, 210, 0.5254901961);
+}
+.error-con .hem-menu-container .hem .hem-menu-slider .hem-menu-footer .twitter {
+  color: black;
+}
+.error-con .error-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+.error-con .error-main .message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  color: white;
+  cursor: context-menu;
+}
+.error-con .error-main .message p {
+  font-weight: 400;
+  font-size: 24px;
+}
+.error-con .error-main .message h1 {
+  font-size: 40px;
+  font-weight: 500;
+  text-align: center;
+}
+.error-con .error-main .search {
+  background-color: white;
+  display: flex;
+  padding: 5px;
+  justify-content: center;
+  align-items: stretch;
+  width: min(650px, 90%);
+  border-radius: 5px;
+}
+.error-con .error-main .search > i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  flex-shrink: 0;
+  font-size: 22px;
+}
+.error-con .error-main .search input {
+  outline: none;
+  border: none;
+  padding: 15px 10px;
+  font-size: 16px;
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.error-con .error-main .search details {
+  flex-shrink: 0;
+  position: relative;
+}
+.error-con .error-main .search details summary {
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 15px;
+  border-radius: 100px;
+  cursor: pointer;
+  gap: 5px;
+}
+.error-con .error-main .search details summary:hover {
+  background-color: rgba(0, 0, 0, 0.078);
+}
+.error-con .error-main .search details > div {
+  position: absolute;
+  right: 0;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgb(241, 238, 238) 0px 1px 4px;
+  padding: 10px;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.error-con .error-main .search details > div > .cat1 {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.683);
+  cursor: pointer;
+  transition: all 0.1s linear;
+}
+.error-con .error-main .search details > div > .cat1:hover {
+  background-color: rgba(0, 0, 0, 0.123);
+  color: black;
+}
+.error-con .error-main .search details > div > .cat1.green {
+  color: #00ab6b;
+}
+.error-con .error-main .search details > div > .cat2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+.error-con .error-main .search details > div > .cat2 p {
+  padding: 5px 30px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.683);
+  cursor: pointer;
+}
+.error-con .error-main .search details > div > .cat2 p:hover {
+  background-color: rgba(0, 0, 0, 0.123);
+  color: black;
+}
+.error-con .error-main .search details > div > .cat2 p.green {
+  color: #00ab6b;
+}
+.error-con .error-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+}
+.error-con .error-footer h2 .link {
+  font-family: rezland, sans-serif;
+  font-size: 35px;
+  color: white;
+  list-style: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+.error-con .error-footer .social {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.error-con .error-footer .social .icon {
+  background-color: rgba(0, 0, 0, 0.18);
+  text-decoration: none;
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 8px;
+  display: flex;
+}
+.error-con .error-footer .social .icon.insta {
+  color: palevioletred;
+}
+.error-con .error-footer .social .icon.pinterest {
+  color: red;
+}
+.error-con .error-footer .social .icon.twitter {
+  color: white;
+}
+.error-con .error-footer .social .icon.fb {
+  color: blue;
+}
+.error-con .error-footer p {
+  font-size: 13px;
+  color: white;
+  cursor: context-menu;
+}

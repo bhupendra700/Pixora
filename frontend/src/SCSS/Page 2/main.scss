@@ -1,0 +1,1243 @@
+.main-div {
+    // background-color: red;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.116);
+    padding-top: 20px;
+    padding-bottom: 100px;
+
+    .upper {
+        // background-color: aqua;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.116);
+        padding: 10px 0;
+
+        .upper-wrapper {
+            display: flex;
+            padding: 0 21px;
+            justify-content: space-between;
+            align-items: center;
+            display: flex;
+
+            .filter1-mob {
+                width: 100%;
+                display: flex;
+
+                button {
+                    background-color: transparent;
+                    border: none;
+                    width: 100%;
+                    padding: 10px;
+                    border-radius: 100px;
+                    cursor: pointer;
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: rgba(0, 0, 0, 0.553);
+                    transition: all .05s linear;
+
+                    &:hover {
+                        background-color: rgba(208, 198, 198, 0.171);
+                    }
+
+                    i,
+                    span {
+                        color: #02b372;
+                    }
+                }
+
+                .mobile {
+                    background-color: transparent;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    animation: in .3s ease-in;
+                    z-index: 15;
+
+
+                    .filter1-wrapper {
+                        background-color: white;
+                        height: 100dvh;
+                        width: 100vw;
+                        display: flex;
+                        flex-direction: column;
+                        padding-bottom: 10px;
+
+                        .header-filter {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            padding: 20px;
+                            border-bottom: 1px solid rgba(0, 0, 0, 0.089);
+
+                            h4 {
+                                cursor: context-menu;
+                            }
+
+                            i {
+                                border-radius: 50%;
+                                padding: 1px;
+                                font-size: 14px;
+                                font-weight: 600;
+                                cursor: pointer;
+
+                                &:hover {
+                                    background-color: rgba(0, 0, 0, 0.089);
+                                }
+                            }
+                        }
+
+                        .body-filter {
+                            padding: 0 20px;
+                            height: 100%;
+                            overflow: auto;
+
+
+                            details {
+                                position: relative;
+                                font-weight: 580;
+                                font-size: 15px;
+                                border-width: 0 0 1px 0;
+                                border-style: solid;
+                                border-color: rgba(0, 0, 0, 0.135);
+
+
+                                &[open] {
+                                    summary {
+                                        i {
+                                            // display: block;
+                                            transform: rotate(-180deg);
+                                        }
+                                    }
+                                }
+
+                                summary {
+                                    padding: 20px 0;
+                                    text-wrap: nowrap;
+                                    list-style: none;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    cursor: pointer;
+
+                                    &:hover {
+                                        i {
+                                            color: #00ab6b;
+                                        }
+                                    }
+
+                                    &::-webkit-details-marker {
+                                        display: none;
+                                    }
+
+                                    i {
+                                        font-size: 20px;
+                                        transition: all .1s linear;
+                                        font-weight: 600;
+                                        color: rgba(0, 0, 0, 0.322);
+                                    }
+
+                                }
+
+                                div {
+                                    background-color: rgb(255, 255, 255);
+                                    display: grid;
+                                    margin-top: 5px;
+                                    width: 100%;
+                                    font-size: 14px;
+
+
+                                    .cat-1,
+                                    .cat-3 {
+                                        padding: 10px;
+                                        cursor: pointer;
+                                        border-radius: 5px;
+                                        font-weight: 400;
+                                        color: rgba(0, 0, 0, 0.587);
+
+                                        &:hover {
+                                            background-color: #75757518;
+                                        }
+
+                                        &.green {
+                                            color: #00ab6b;
+                                        }
+                                    }
+
+                                    .cat-2 {
+                                        p {
+                                            color: rgba(0, 0, 0, 0.587);
+                                            padding: 10px;
+                                            padding-left: 30px;
+                                            border-radius: 5px;
+                                            cursor: pointer;
+                                            font-weight: 400;
+
+
+                                            &:hover {
+                                                background-color: #75757518;
+                                            }
+
+                                            &.green {
+                                                color: #00ab6b;
+                                            }
+                                        }
+                                    }
+                                }
+
+                            }
+
+                            .orientation {
+                                div {
+                                    span {
+                                        font-size: 14px;
+                                        font-weight: 400;
+                                    }
+                                }
+
+                            }
+
+                            .color {
+                                .color-div {
+                                    &>*+* {
+                                        margin: 20px 0;
+                                    }
+
+                                    .transparent-con,
+                                    .black-white {
+                                        label {
+                                            width: 100%;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: space-between;
+                                            padding: 10px;
+                                            font-weight: 400;
+                                            font-size: 14px;
+                                            border-radius: 5px;
+                                            cursor: pointer;
+
+                                            &:has(input[type=checkbox]:checked) {
+                                                color: #00ab6b;
+                                            }
+
+                                            &:hover {
+                                                background-color: rgba(219, 215, 215, 0.509);
+
+                                                input[type=checkbox] {
+                                                    border: 2px solid black;
+
+                                                    &:after {
+                                                        content: "\EB7B";
+                                                        position: absolute;
+                                                        font-family: remixicon;
+                                                        top: 50%;
+                                                        left: 50%;
+                                                        transform: translate(-50%, -50%);
+                                                    }
+
+                                                    &:checked {
+                                                        &:after {
+                                                            color: white;
+                                                        }
+                                                    }
+                                                }
+
+                                            }
+
+                                            input[type=checkbox] {
+                                                appearance: none;
+                                                position: relative;
+                                                padding: 10px;
+                                                border: 2px solid rgba(0, 0, 0, 0.174);
+                                                border-radius: 3px;
+
+                                                &:checked {
+                                                    background-color: #00ab6b;
+                                                    border: 2px solid #00ab6b;
+
+                                                    &:after {
+                                                        content: "\EB7B";
+                                                        position: absolute;
+                                                        font-family: remixicon;
+                                                        top: 50%;
+                                                        left: 50%;
+                                                        transform: translate(-50%, -50%);
+                                                        color: white;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .color-con {
+                                        padding: 10px 0;
+                                        flex-wrap: wrap;
+                                        display: flex;
+                                        // justify-content: space-between;
+                                        align-items: center;
+                                        flex-wrap: wrap;
+                                        gap: 30px;
+
+                                        input[type=checkbox] {
+                                            // aspect-ratio: 1/1;
+                                            position: relative;
+                                            appearance: none;
+                                            border-radius: 50%;
+                                            border: 1px solid rgba(0, 0, 0, 0.068);
+                                            cursor: pointer;
+                                            padding: 25px;
+
+                                            //unckecked
+                                            &:hover {
+                                                &:after {
+                                                    position: absolute;
+                                                    content: "\EA13";
+                                                    display: flex;
+                                                    align-items: center;
+                                                    justify-content: center;
+                                                    top: -4px;
+                                                    right: -4px;
+                                                    padding: 4px;
+                                                    font-family: remixicon;
+                                                    background-color: rgb(230, 230, 230);
+                                                    border-radius: 50%;
+                                                    border: 2px solid white;
+                                                    font-size: 11px;
+                                                    font-weight: 550;
+                                                }
+                                            }
+
+                                            //checked
+                                            &:checked {
+                                                &:after {
+                                                    position: absolute;
+                                                    content: "\EB7B";
+                                                    display: flex;
+                                                    align-items: center;
+                                                    justify-content: center;
+                                                    top: -4px;
+                                                    right: -4px;
+                                                    padding: 4px;
+                                                    font-family: remixicon;
+                                                    background-color: #00ab6b;
+                                                    color: white;
+                                                    border-radius: 50%;
+                                                    border: 2px solid white;
+                                                    font-size: 11px;
+                                                    font-weight: 550;
+
+                                                }
+
+                                                &:hover {
+                                                    &:after {
+                                                        content: "\EB99";
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .button-con {
+                                        // background-color: red;
+                                        display: flex;
+                                        gap: 10px;
+
+                                        button {
+                                            &:hover {
+                                                background-color: rgba(0, 0, 0, 0.066);
+                                            }
+                                        }
+
+                                        button:nth-child(2) {
+                                            background-color: #00ab6b;
+                                            color: white;
+
+                                            &:hover {
+                                                background-color: #00ab6cc4;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .size {
+                                // border: 1px solid; 
+
+                                form {
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 10px;
+
+                                    div:nth-child(2) {
+                                        // border: 1px solid;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        gap: 20px;
+                                        font-weight: 400;
+                                        font-size: 14px;
+                                        color: rgba(0, 0, 0, 0.584);
+
+                                        input {
+                                            width: 100%;
+                                            font-size: 14px;
+                                            padding: 10px;
+                                            border-radius: 10px;
+                                            border: 1px solid rgba(0, 0, 0, 0.174);
+                                            outline: none;
+
+                                            &::placeholder {
+                                                color: rgba(0, 0, 0, 0.187);
+                                            }
+
+                                            &:hover {
+                                                border: 1px solid black;
+
+                                            }
+
+                                            &:focus {
+                                                border: 1px solid black;
+                                            }
+                                        }
+                                    }
+
+                                    div:nth-child(3) {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        gap: 10px;
+                                        padding-bottom: 18px;
+
+                                        button {
+                                            width: 100%;
+
+                                            &:nth-child(2) {
+                                                background-color: #01be79;
+                                                color: white;
+                                                font-weight: 650;
+
+                                                &:hover {
+                                                    background-color: #03cb82;
+
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                            }
+
+                            .content-type {
+                                summary {
+                                    // background-color: red;
+                                    align-items: flex-end;
+
+                                    div {
+                                        width: fit-content;
+                                    }
+
+                                    div:nth-child(2) {
+                                        width: 100%;
+
+                                        span {
+                                            background-color: #00ab6b;
+                                            border-radius: 5px;
+                                            color: white;
+                                            padding: 0px 5px;
+                                            margin: 0 10px;
+                                            cursor: pointer;
+                                            width: fit-content;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .globalClear {
+                                margin: 20px 0;
+                                transition: all 0.01s linear;
+
+                                &:hover {
+                                    background-color: rgba(0, 0, 0, 0.075);
+                                }
+                            }
+                        }
+
+                    }
+
+                }
+
+                .go {
+                    animation: out .3s ease-in;
+                }
+            }
+
+            .filter2-mob {
+                width: 100%;
+
+                details {
+                    position: relative;
+                    border-radius: 100px;
+                    border: 1px solid rgba(0, 0, 0, 0.258);
+                    font-size: 14px;
+                    transition: all .15s linear;
+
+                    &:hover {
+                        border: 1px solid black;
+                    }
+
+                    &[open] {
+                        border: 1px solid black;
+
+                        summary {
+                            i {
+                                // display: block;
+                                transform: rotate(-180deg);
+                            }
+                        }
+                    }
+
+                    summary {
+                        font-weight: 580;
+                        padding: 10px 20px;
+                        text-wrap: nowrap;
+                        list-style: none;
+                        display: flex;
+                        justify-content: center;
+                        align-items: stretch;
+                        cursor: pointer;
+                        gap: 3px;
+
+
+                        &::-webkit-details-marker {
+                            display: none;
+                        }
+
+                        i {
+                            font-size: 20px;
+                            transition: all .1s linear;
+                        }
+
+                    }
+
+                    div {
+                        position: absolute;
+                        background-color: white;
+                        display: grid;
+                        width: 100%;
+                        font-weight: 450;
+                        right: 0;
+                        padding: 20px;
+                        border-radius: 10px;
+                        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+                        margin-top: 5px;
+                        color: rgba(0, 0, 0, 0.543);
+
+
+                        .cat-1,
+                        .cat-3 {
+                            padding: 10px;
+                            cursor: pointer;
+                            font-size: 14px;
+                            border-radius: 8px;
+
+                            &:hover {
+                                background-color: #75757518;
+                            }
+
+                            &.green {
+                                color: #00ab6b;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &:has(.filter1-web) {
+                gap: 20px;
+            }
+
+            .filter1-web {
+                width: 100%;
+
+                .web {
+                    .filter1-wrapper {
+
+                        .body-filter {
+                            // background-color: yellow;
+                            flex-wrap: wrap;
+                            display: flex;
+                            align-items: center;
+                            // justify-content: center;
+                            gap: 10px;
+
+                            details:is(.catagory, .orientation, .size, .published-date, .content-type) {
+                                position: relative;
+                                font-size: 15px;
+
+
+                                &[open] {
+                                    summary {
+                                        color: black;
+
+                                        i {
+                                            // display: block;
+                                            transform: rotate(-180deg);
+                                            color: #00ab6b;
+                                        }
+                                    }
+                                }
+
+                                summary {
+                                    padding: 10px 15px;
+                                    border-radius: 500px;
+                                    font-weight: 580;
+                                    text-wrap: nowrap;
+                                    list-style: none;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: stretch;
+                                    cursor: pointer;
+                                    gap: 5px;
+                                    color: rgba(0, 0, 0, 0.589);
+                                    transition: all .15s linear;
+
+                                    &:hover {
+                                        background-color: rgba(145, 145, 140, 0.105);
+                                    }
+
+                                    &::-webkit-details-marker {
+                                        display: none;
+                                    }
+
+                                    i {
+                                        font-size: 20px;
+                                        transition: all .1s linear;
+                                        font-weight: 600;
+                                        color: rgba(0, 0, 0, 0.322);
+                                    }
+
+                                }
+
+                                div {
+                                    position: absolute;
+                                    background-color: white;
+                                    display: grid;
+                                    font-weight: 350;
+                                    width: 200px;
+                                    left: 0;
+                                    padding: 20px;
+                                    border-radius: 10px;
+                                    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+                                    margin-top: 5px;
+                                    color: rgba(0, 0, 0, 0.607);
+                                    z-index: 5;
+
+                                    .cat-1,
+                                    .cat-3 {
+                                        padding: 10px;
+                                        cursor: pointer;
+                                        font-size: 14px;
+                                        border-radius: 8px;
+
+                                        &:hover {
+                                            background-color: #75757518;
+                                        }
+                                    }
+
+                                    .cat-2 {
+                                        p {
+                                            padding: 10px;
+                                            padding-left: 30px;
+                                            border-radius: 8px;
+                                            cursor: pointer;
+                                            font-size: 14px;
+
+                                            &:hover {
+                                                background-color: #75757518;
+                                            }
+                                        }
+                                    }
+
+                                    .green {
+                                        color: #00ab6b;
+                                    }
+                                }
+
+                            }
+
+                            .size {
+                                form {
+
+                                    // display: flex;
+                                    div {
+                                        display: block;
+                                        z-index: 0;
+                                    }
+
+                                    div:nth-child(1) {
+                                        // z-index: 6;
+                                        display: block;
+                                    }
+                                }
+
+                                div {
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 20px;
+                                    width: 350px !important;
+
+                                    section:nth-child(1) {
+                                        font-weight: 600;
+                                        color: black;
+                                        cursor: context-menu;
+                                    }
+
+                                    section:nth-child(2) {
+                                        // background-color: aqua;
+                                        font-weight: 500;
+                                        color: rgba(0, 0, 0, 0.525);
+                                        font-size: 14px;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        gap: 10px;
+
+                                        input {
+                                            outline: none;
+                                            border: 1px solid rgba(0, 0, 0, 0.242);
+                                            border-radius: 5px;
+                                            padding: 10px;
+                                            width: 100%;
+
+                                            &:hover,
+                                            &:focus {
+                                                border: 1px solid black;
+                                            }
+                                        }
+                                    }
+
+                                    section:nth-child(3) {
+                                        // background-color: red;
+                                        display: flex;
+                                        justify-content: space-between;
+
+                                        button {
+                                            border: none;
+                                            border-radius: 50px;
+                                            padding: 6px 12px;
+                                            color: rgba(0, 0, 0, 0.557);
+                                            font-weight: 600;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            gap: 5px;
+                                            cursor: pointer;
+                                            background-color: transparent;
+
+                                            &:hover {
+                                                background-color: rgba(0, 0, 0, 0.078);
+                                            }
+
+                                            &:nth-child(2) {
+                                                background-color: #00ab6b;
+                                                color: white;
+                                            }
+                                        }
+
+                                    }
+
+                                }
+                            }
+
+                            .color {
+                                position: relative;
+                                font-size: 15px;
+
+                                &[open] {
+                                    summary {
+                                        color: black;
+
+                                        i {
+                                            // display: block;
+                                            transform: rotate(-180deg);
+                                            color: #00ab6b;
+                                        }
+                                    }
+                                }
+
+                                summary {
+                                    padding: 10px 15px;
+                                    border-radius: 500px;
+                                    font-weight: 580;
+                                    text-wrap: nowrap;
+                                    list-style: none;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: stretch;
+                                    cursor: pointer;
+                                    gap: 5px;
+                                    color: rgba(0, 0, 0, 0.589);
+                                    transition: all .15s linear;
+
+                                    &:hover {
+                                        background-color: rgba(145, 145, 140, 0.105);
+                                    }
+
+                                    &::-webkit-details-marker {
+                                        display: none;
+                                    }
+
+                                    i {
+                                        font-size: 20px;
+                                        transition: all .1s linear;
+                                        font-weight: 600;
+                                        color: rgba(0, 0, 0, 0.322);
+                                    }
+
+                                }
+
+                                .color-div {
+                                    position: absolute;
+                                    background-color: white;
+                                    font-weight: 350;
+                                    left: 0;
+                                    padding: 20px;
+                                    border-radius: 10px;
+                                    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+                                    margin-top: 5px;
+                                    color: rgba(0, 0, 0, 0.607);
+                                    z-index: 5;
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 10px;
+                                    // width: max(450px, 100%);
+
+                                    .transparent-con,
+                                    .black-white {
+                                        label {
+                                            white-space: nowrap;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: space-between;
+                                            gap: 2px;
+                                            padding: 8px 10px;
+                                            color: rgba(0, 0, 0, 0.635);
+                                            border-radius: 8px;
+                                            cursor: pointer;
+
+                                            &:has(input[type=checkbox]:checked) {
+                                                color: #00ab6b;
+                                            }
+
+                                            &:hover {
+                                                background-color: rgba(219, 215, 215, 0.509);
+
+                                                input[type=checkbox] {
+                                                    border: 2px solid black;
+
+                                                    &:after {
+                                                        content: "\EB7B";
+                                                        position: absolute;
+                                                        font-family: remixicon;
+                                                        top: 50%;
+                                                        left: 50%;
+                                                        transform: translate(-50%, -50%);
+                                                    }
+
+                                                    &:checked {
+                                                        &:after {
+                                                            color: white;
+                                                        }
+                                                    }
+                                                }
+
+                                            }
+
+                                            input[type=checkbox] {
+                                                appearance: none;
+                                                position: relative;
+                                                border: 2px solid rgba(0, 0, 0, 0.082);
+                                                padding: 10px;
+                                                border-radius: 3px;
+
+                                                &:checked {
+                                                    border: 2px solid #00ab6b;
+                                                    background-color: #00ab6b;
+
+                                                    &::before {
+                                                        content: "\EB7B";
+                                                        font-family: remixicon;
+                                                        position: absolute;
+                                                        top: 50%;
+                                                        left: 50%;
+                                                        transform: translate(-50%, -50%);
+                                                        color: white;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .color-con {
+                                        // background-color: #00ab6b;
+                                        padding: 10px 0;
+                                        flex-wrap: wrap;
+                                        display: grid;
+                                        grid-template-columns: repeat(6, 40px);
+                                        gap: 15px;
+                                        justify-content: space-between;
+                                        align-items: center;
+
+
+                                        input[type=checkbox] {
+                                            aspect-ratio: 1/1;
+                                            position: relative;
+                                            appearance: none;
+                                            border-radius: 50%;
+                                            border: 1px solid rgba(0, 0, 0, 0.068);
+                                            cursor: pointer;
+
+                                            //unckecked
+                                            &:hover {
+                                                &:after {
+                                                    position: absolute;
+                                                    content: "\EA13";
+                                                    display: flex;
+                                                    align-items: center;
+                                                    justify-content: center;
+                                                    top: -4px;
+                                                    right: -4px;
+                                                    padding: 4px;
+                                                    font-family: remixicon;
+                                                    background-color: rgb(230, 230, 230);
+                                                    border-radius: 50%;
+                                                    border: 2px solid white;
+                                                    font-size: 11px;
+                                                    font-weight: 550;
+                                                }
+                                            }
+
+                                            //checked
+                                            &:checked {
+                                                &:after {
+                                                    position: absolute;
+                                                    content: "\EB7B";
+                                                    display: flex;
+                                                    align-items: center;
+                                                    justify-content: center;
+                                                    top: -4px;
+                                                    right: -4px;
+                                                    padding: 4px;
+                                                    font-family: remixicon;
+                                                    background-color: #00ab6b;
+                                                    color: white;
+                                                    border-radius: 50%;
+                                                    border: 2px solid white;
+                                                    font-size: 11px;
+                                                    font-weight: 550;
+
+                                                }
+
+                                                &:hover {
+                                                    &:after {
+                                                        content: "\EB99";
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .button-con {
+                                        // background-color: red;
+                                        display: flex;
+                                        justify-content: space-between;
+                                        align-items: center;
+
+                                        button {
+                                            border: none;
+                                            background-color: transparent;
+                                            padding: 10px 20px;
+                                            border-radius: 100px;
+                                            font-size: 14px;
+                                            font-weight: 600;
+                                            color: rgba(0, 0, 0, 0.639);
+                                            cursor: pointer;
+                                            transition: all .15s linear;
+
+                                            &:hover {
+                                                background-color: #0000001b;
+                                            }
+                                        }
+
+                                        button:nth-child(2) {
+                                            background-color: #00ab6b;
+                                            color: white;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .content-type {
+                                summary {
+                                    width: fit-content;
+                                    display: flex;
+                                    // align-items: center;
+
+                                    span {
+                                        background-color: #00ab6b;
+                                        color: white;
+                                        border-radius: 5px;
+                                        padding: 2px 5px;
+                                        font-size: 14px;
+                                        text-align: center;
+                                    }
+                                }
+                            }
+
+                            .globalClear {
+                                border: none;
+                                padding: 10px 15px;
+                                border-radius: 100px;
+                                font-weight: 600;
+                                font-size: 14px;
+                                color: rgba(0, 0, 0, 0.58);
+                                cursor: pointer;
+                                background-color: transparent;
+
+                                &:hover {
+                                    background-color: rgba(0, 0, 0, 0.091);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .filter2-web {
+
+                // background-color: red;
+                details {
+                    position: relative;
+                    border-radius: 100px;
+                    border: 1px solid rgba(0, 0, 0, 0.258);
+                    font-size: 14px;
+                    transition: all .15s linear;
+
+                    &:hover {
+                        border: 1px solid black;
+                    }
+
+                    &[open] {
+                        border: 1px solid black;
+
+                        summary {
+                            i {
+                                // display: block;
+                                transform: rotate(-180deg);
+                            }
+                        }
+                    }
+
+                    summary {
+                        font-weight: 580;
+                        padding: 10px 20px;
+                        text-wrap: nowrap;
+                        list-style: none;
+                        display: flex;
+                        justify-content: center;
+                        align-items: stretch;
+                        cursor: pointer;
+                        gap: 3px;
+
+
+                        &::-webkit-details-marker {
+                            display: none;
+                        }
+
+                        i {
+                            font-size: 20px;
+                            transition: all .1s linear;
+                        }
+
+                    }
+
+                    div {
+                        position: absolute;
+                        background-color: white;
+                        display: grid;
+                        width: 200px;
+                        font-weight: 450;
+                        right: 0;
+                        padding: 20px;
+                        border-radius: 10px;
+                        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+                        margin-top: 5px;
+                        color: rgba(0, 0, 0, 0.543);
+
+
+                        .cat-1,
+                        .cat-3 {
+                            padding: 10px;
+                            cursor: pointer;
+                            font-size: 14px;
+                            border-radius: 8px;
+
+                            &:hover {
+                                background-color: #75757518;
+                            }
+
+                            &.green {
+                                color: #00ab6b;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .middle {
+        // background-color: red;
+        padding: 50px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+
+        h2,
+        p {
+            cursor: context-menu;
+        }
+
+        p {
+            color: rgba(0, 0, 0, 0.498);
+            font-size: 14px;
+        }
+
+        .keywords {
+            // background-color: aqua;
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 10px;
+            overflow: auto;
+            scrollbar-width: none;
+            align-items: center;
+
+            .box {
+                background-color: white;
+                white-space: nowrap;
+                padding: 5px 10px;
+                border-radius: 8px;
+                border: 1px solid rgba(0, 0, 0, 0.237);
+                text-decoration: none;
+                color: black;
+
+                &:hover {
+                    border: 1px solid black;
+                }
+            }
+        }
+    }
+
+    .lower {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 0 20px;
+
+        .lower-heading {
+            color: rgba(25, 27, 38, 0.64);
+            font-size: 14px;
+            cursor: context-menu;
+        }
+
+        .main-card-con {
+            position: relative;
+            margin-top: 10px;
+            width: 100%;
+
+            .frame {
+                .container {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 20px 0;
+                    gap: 20px;
+
+                    &>div {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+
+                        .card {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            text-decoration: none;
+                            color: black;
+                            position: relative;
+
+                            &:has(video)::after {
+                                position: absolute;
+                                content: "\F51D";
+                                font-family: remixicon;
+                                padding: 10px;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                border-radius: 50%;
+                                background-color: rgba(0, 0, 0, 0.242);
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                color: white;
+                            }
+
+                            &:hover::after {
+                                content: "";
+                                background-color: transparent;
+                            }
+
+                            img {
+                                width: 100%;
+                                object-fit: cover;
+                            }
+
+                            video {
+                                width: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .loader {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 20px;
+        }
+
+        &.noresult {
+            height: calc(100vh - 600px);
+        }
+    }
+}
+
+@keyframes in {
+    0% {
+        top: 100%;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes out {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 100%;
+    }
+}

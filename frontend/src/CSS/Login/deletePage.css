@@ -1,0 +1,111 @@
+.delete-container {
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  width: 100vw;
+  display: flex;
+  padding: 10px;
+  overflow: auto;
+  z-index: 200;
+}
+.delete-container .delete-account {
+  background-color: white;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: min(100%, 380px);
+}
+.delete-container .delete-account .delete-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.delete-container .delete-account .delete-header i {
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.delete-container .delete-account .delete-header i:hover {
+  background-color: rgba(44, 42, 42, 0.1921568627);
+}
+.delete-container .delete-account .delete-message {
+  background-color: #fcf6e5;
+  padding: 15px;
+  border-radius: 10px;
+  line-height: 25px;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+.delete-container .delete-account .delete-message p:nth-child(1) {
+  font-weight: 650;
+}
+.delete-container .delete-account .delete-message p:nth-child(1) i {
+  font-size: 17px;
+  color: #eac560;
+}
+.delete-container .delete-account .delete-message p:nth-child(2) {
+  margin-left: 23px;
+  color: #7b7979;
+}
+.delete-container .delete-account form .password-box {
+  color: black;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.delete-container .delete-account form .password-box input {
+  width: 100%;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.26);
+  padding: 10px;
+  margin: 10px 0;
+}
+.delete-container .delete-account form .password-box input:hover {
+  border: 1px solid rgba(0, 0, 0, 0.952);
+}
+.delete-container .delete-account form .password-box input:focus {
+  border: 1px solid rgba(0, 0, 0, 0.952);
+}
+.delete-container .delete-account form .password-box input::placeholder {
+  color: rgba(70, 68, 68, 0.2862745098);
+}
+.delete-container .delete-account form .buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 15px;
+}
+.delete-container .delete-account form .buttons .cancel,
+.delete-container .delete-account form .buttons .delete {
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.delete-container .delete-account form .buttons .cancel {
+  background-color: transparent;
+  color: rgba(70, 68, 68, 0.7490196078);
+  padding: 10px 20px;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.delete-container .delete-account form .buttons .cancel:hover {
+  background-color: #f0f0f0;
+}
+.delete-container .delete-account form .buttons .delete {
+  background-color: #e34848;
+  color: white;
+  width: 140px;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding: 0 20px;
+}
+.delete-container .delete-account form .buttons .delete:hover {
+  background-color: rgba(227, 72, 72, 0.753);
+}

@@ -1,0 +1,317 @@
+.editprofilebox {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100dvh;
+        width: 100vw;
+        display: flex;
+        overflow: auto;
+        padding: 10px;
+        z-index: 200;
+
+        .editprofile {
+            margin: auto;
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            overflow: auto;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+            .headerprofile {
+                display: flex;
+                gap: 20px;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 30px;
+
+                i {
+                    padding: 5px;
+                    border-radius: 5px;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #4644443d;
+                    }
+                }
+            }
+
+            .profileimage {
+                height: 150px;
+                width: 150px;
+                border-radius: 50%;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                margin: auto;
+                margin-bottom: 30px;
+                overflow: hidden;
+
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .upload-btn {
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                padding: 0 10px;
+                margin-bottom: 10px;
+                flex-wrap: wrap;
+                gap: 10px;
+
+                .upload,
+                .remove {
+                    padding: 10px 20px;
+                    border-radius: 50px;
+                    cursor: pointer;
+                    font-weight: 550;
+                    font-size: 15px;
+                    border: #9692924d 1px solid;
+                    background-color: white;
+                    width: min(100%, 135px);
+
+                    &:hover {
+                        border: black 1px solid;
+                    }
+                }
+            }
+
+            .remove {
+                color: #464444d8;
+                border: none !important;
+
+                &:hover {
+                    border: none !important;
+                    background-color: #78757517 !important;
+                }
+            }
+
+            #file {
+                display: none;
+            }
+
+            .option {
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                gap: 5px;
+
+                span:nth-child(1),
+                span:nth-child(3) {
+                    flex-grow: 1;
+                    border-top: 1px solid rgba(0, 0, 0, 0.258);
+                }
+
+                span:nth-child(2) {
+                    color: #1a19197d;
+                }
+            }
+
+            .pattern {
+                //sirf image tag ke sath
+
+                // margin-bottom: 20px;
+                // display: flex;
+                // flex-wrap: wrap;
+                // justify-content: center;
+                // gap: 5px;
+
+                // img {
+                //     height: 90px;
+                //     border-radius: 50%;
+                //     cursor: pointer;
+                // }
+
+                //ek div uske undar input tag
+                margin-bottom: 20px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 5px;
+                gap: 10px;
+
+
+                input[type=radio] {
+                    cursor: pointer;
+                    appearance: none;
+                    height: 90px;
+                    width: 90px;
+                    border-radius: 50%;
+                    position: relative;
+
+                    &:hover {
+                        &::after {
+                            position: absolute;
+                            content: "\EA13";
+                            font-family: remixicon;
+                            height: 18px;
+                            width: 18px;
+                            border: 2px solid white;
+                            background-color: rgb(221, 220, 220);
+                            border-radius: 50%;
+                            top: -3px;
+                            right: 6px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 12px;
+                            font-weight: 600;
+                        }
+                    }
+
+                    &:checked {
+                        &::after {
+                            position: absolute;
+                            content: "\EB7B";
+                            font-family: remixicon;
+                            height: 18px;
+                            width: 18px;
+                            border: 2px solid white;
+                            background-color: #00ab6b;
+                            border-radius: 50%;
+                            top: -3px;
+                            right: 6px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 12px;
+                            font-weight: 600;
+                            color: white;
+                        }
+                    }
+
+                    &.one {
+                        background: url('../../Images/1.jpg');
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                    }
+
+                    &.two {
+                        background: url('../../Images/2.jpg');
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                    }
+
+                    &.three {
+                        background: url('../../Images/3.jpg');
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                    }
+
+                    &.four {
+                        background: url('../../Images/4.jpg');
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                    }
+
+                    &.five {
+                        background: url('../../Images/5.jpg');
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                    }
+                }
+            }
+
+            .name {
+                margin-bottom: 15px;
+
+                .nochange {
+                    display: flex;
+                    align-items: center;
+                    cursor: context-menu;
+
+                    .text {
+                        flex-grow: 1;
+                    }
+
+                    i {
+                        padding: 5px;
+                        font-size: 25px;
+                        border-radius: 5px;
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: #2c2a2a48;
+                        }
+                    }
+                }
+
+                .change {
+                    display: flex;
+                    align-items: center;
+                    border-radius: 10px;
+                    border: 2px solid black;
+                    overflow: hidden;
+
+                    input {
+                        width: 100%;
+                        outline: none;
+                        padding: 10px;
+                        border: none;
+                        font-size: 16px;
+                    }
+
+                    i {
+                        color: white;
+                        padding: 10px 20px;
+                        font-size: 22px;
+                        background-color: #464444;
+                        cursor: pointer;
+                    }
+                }
+
+                .error {
+                    color: red;
+                    font-size: 13px;
+                    margin-top: 5px;
+                }
+            }
+
+            .apply {
+                background-color: #00ab6b;
+                width: 80px;
+                padding: 10px 20px;
+                border-radius: 30px;
+                color: white;
+                cursor: pointer;
+                margin-left: auto;
+                margin-bottom: 15px;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .option {
+                .danger {
+                    color: red !important;
+                    font-weight: 600 !important;
+                }
+            }
+
+            .delete-account {
+                background-color: #00ab6b;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 40px;
+                color: white;
+                font-size: 15px;
+                display: block;
+                margin: auto;
+                margin-top: 20px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #00ab6cdb;
+                }
+            }
+        }
+    }

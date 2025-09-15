@@ -1,0 +1,1591 @@
+.hero-container {
+  height: 500px;
+  width: 100%;
+  background-color: rgba(20, 20, 21, 0.4352941176);
+  background-blend-mode: darken;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+.hero-container .bg-img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: center center;
+  z-index: -2;
+}
+.hero-container video {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center center;
+  z-index: -1;
+}
+.hero-container .layer {
+  background-color: rgba(25, 27, 38, 0.1450980392);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+.hero-container header {
+  padding: 10px 20px;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  color: white;
+  z-index: 2;
+}
+.hero-container header .logo {
+  text-decoration: none;
+}
+.hero-container header .logo .long {
+  font-family: rezland, sans-serif;
+  font-size: 38px;
+  cursor: pointer;
+  color: white;
+}
+.hero-container header .logo .short {
+  font-family: rezland, sans-serif;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 33px;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+}
+.hero-container header .search {
+  display: flex;
+  visibility: hidden;
+  flex-wrap: nowrap;
+  align-items: center;
+  background-color: #f6f6f6;
+  border-radius: 40px;
+  width: 100%;
+}
+.hero-container header .search:hover {
+  background-color: rgb(233.25, 233.25, 233.25);
+}
+.hero-container header .search:hover .search-icon {
+  color: rgba(0, 0, 0, 0.7843137255);
+}
+.hero-container header .search:hover input {
+  background-color: rgb(233.25, 233.25, 233.25);
+}
+.hero-container header .search:hover input::placeholder {
+  color: black;
+}
+.hero-container header .search .search-icon {
+  padding: 0 10px;
+  cursor: pointer;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6039215686);
+}
+.hero-container header .search input {
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: #f6f6f6;
+  border-radius: 0 40px 40px 0;
+  font-size: 15px;
+  padding: 10px 10px 10px 0;
+}
+.hero-container header .search input:focus::placeholder {
+  color: #757575;
+}
+.hero-container header .search input::placeholder {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+}
+.hero-container header .search details {
+  position: relative;
+  font-weight: 580;
+  border-radius: 20px;
+  font-size: 15px;
+}
+.hero-container header .search details:hover {
+  background-color: rgb(220.5, 220.5, 220.5);
+}
+.hero-container header .search details[open] summary i {
+  transform: rotate(-180deg);
+}
+.hero-container header .search details summary {
+  padding: 10px 20px;
+  text-wrap: nowrap;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.hero-container header .search details summary::-webkit-details-marker {
+  display: none;
+}
+.hero-container header .search details summary i {
+  font-size: 20px;
+  transition: all 0.1s linear;
+}
+.hero-container header .search details div {
+  position: absolute;
+  background-color: white;
+  display: grid;
+  width: 200px;
+  right: 0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  margin-top: 5px;
+}
+.hero-container header .search details div .cat-1,
+.hero-container header .search details div .cat-3 {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 8px;
+}
+.hero-container header .search details div .cat-1:hover,
+.hero-container header .search details div .cat-3:hover {
+  background-color: rgba(117, 117, 117, 0.0941176471);
+  color: #00ab6b;
+}
+.hero-container header .search details div .cat-1.green,
+.hero-container header .search details div .cat-3.green {
+  color: #00ab6b;
+}
+.hero-container header .search details div .cat-2 p {
+  padding: 10px;
+  padding-left: 30px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.hero-container header .search details div .cat-2 p:hover {
+  background-color: rgba(117, 117, 117, 0.0941176471);
+  color: #00ab6b;
+}
+.hero-container header .search details div .cat-2 p.green {
+  color: #00ab6b;
+}
+.hero-container header .login button {
+  background-color: transparent;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 20px;
+  font-weight: 580;
+  font-size: 15px;
+  text-wrap: nowrap;
+  cursor: pointer;
+  color: white;
+}
+.hero-container header .login button:hover {
+  background-color: rgba(246, 246, 246, 0.2156862745);
+}
+.hero-container header .join button {
+  background-color: transparent;
+  border: 1px solid rgba(246, 246, 246, 0.2156862745);
+  padding: 10px 18px;
+  border-radius: 20px;
+  font-weight: 580;
+  font-size: 15px;
+  text-wrap: nowrap;
+  cursor: pointer;
+  color: white;
+}
+.hero-container header .join button:hover {
+  background-color: rgba(246, 246, 246, 0.2156862745);
+}
+.hero-container header .user {
+  position: relative;
+}
+.hero-container header .user summary {
+  list-style: none;
+  height: 45px;
+  width: 45px;
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.hero-container header .user summary img {
+  height: 100%;
+  width: 100%;
+}
+.hero-container header .user .profile {
+  position: absolute;
+  background-color: black;
+  color: white;
+  display: grid;
+  right: 0;
+  padding: 20px 15px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  margin-top: 2px;
+}
+.hero-container header .user .profile .box,
+.hero-container header .user .profile button {
+  color: rgba(255, 255, 255, 0.862745098);
+  font-size: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 10px;
+}
+.hero-container header .user .profile .box:hover,
+.hero-container header .user .profile button:hover {
+  background-color: rgba(117, 117, 117, 0.4156862745);
+  color: #ffffff;
+}
+.hero-container header .user .profile .box:nth-child(2) {
+  cursor: context-menu;
+}
+.hero-container header .user .profile button {
+  background-color: transparent;
+  border: none;
+  text-align: start;
+}
+.hero-container header .user .profile .name {
+  font-weight: 700;
+  color: white;
+  padding: 10px;
+  cursor: default;
+}
+.hero-container header .user .profile .safesearch {
+  padding: 5px 0;
+  min-width: 230px;
+  border-style: solid;
+  border-width: 1px 0;
+  border-color: rgba(255, 255, 255, 0.3411764706);
+  margin: 5px 0;
+}
+.hero-container header .user .profile .safesearch .switchlabel {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+.hero-container header .user .profile .safesearch .switchlabel .safeSearch-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+.hero-container header .user .profile .safesearch .switchlabel .safeSearch-container .switch {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 45px;
+  height: auto;
+  border-radius: 20px;
+  padding: 4px;
+  background-color: #2c2a2a;
+}
+.hero-container header .user .profile .safesearch .switchlabel .safeSearch-container .switch input {
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: rgb(221, 219, 219);
+  cursor: pointer;
+  transition: transform 0.2s linear;
+}
+.hero-container header .user .profile .safesearch .switchlabel .safeSearch-container .switch input:checked {
+  transform: translateX(16px);
+}
+.hero-container header .user .profile .safesearch .switchlabel .safeSearch-container .switchon {
+  background-color: #058d5b;
+}
+.hero-container header .user .profile .safesearch .switchlabel:hover .switch {
+  background-color: #464444;
+}
+.hero-container header .user .profile .safesearch .switchlabel:hover .switch input {
+  background-color: white;
+}
+.hero-container header .user .profile .safesearch .switchlabel:hover .switchon {
+  background-color: #09d88c;
+}
+.hero-container header .user .profile .safesearch .switchlabel:hover .switchon input {
+  background-color: white;
+}
+.hero-container header .user .profile .safesearch .switchlabel .safesearch-info {
+  display: flex;
+  position: relative;
+  padding: 5px;
+}
+.hero-container header .user .profile .safesearch .switchlabel .safesearch-info:hover .safesearchmessage {
+  display: block;
+}
+.hero-container header .user .profile .safesearch .switchlabel .safesearch-info .safesearchmessage {
+  position: absolute;
+  display: none;
+  right: 50%;
+  top: 0;
+  transform: translate(50%, -100%);
+  background-color: black;
+  width: 250px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+.hero-container header .logout {
+  background-color: transparent;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 20px;
+  font-weight: 580;
+  font-size: 15px;
+  text-wrap: nowrap;
+  cursor: pointer;
+  color: white;
+}
+.hero-container header .logout:hover {
+  background-color: rgba(246, 246, 246, 0.2156862745);
+}
+.hero-container header .user-hameburgur {
+  font-weight: 800;
+  font-size: 20px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.hero-container header .user-hameburgur:hover {
+  background-color: rgba(115, 112, 112, 0.662745098);
+}
+.hero-container header.light-header {
+  background-color: white;
+  transition: all 0.1s linear;
+  color: black;
+}
+.hero-container header.light-header .logo .long {
+  color: black;
+}
+.hero-container header.light-header .logo .short {
+  color: white;
+  background-color: black;
+}
+.hero-container header.light-header .search {
+  visibility: visible;
+  transition: visibility 0.1s linear;
+}
+.hero-container header.light-header .login button,
+.hero-container header.light-header .join button {
+  background-color: white;
+  color: black;
+}
+.hero-container header.light-header .login button:hover,
+.hero-container header.light-header .join button:hover {
+  background-color: rgba(0, 0, 0, 0.0745098039);
+}
+.hero-container header.light-header .join button {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+.hero-container header.light-header .logout {
+  color: black;
+}
+.hero-container header.light-header .logout:hover {
+  background-color: rgba(0, 0, 0, 0.0745098039);
+}
+.hero-container header.light-header .user-hameburgur:hover {
+  background-color: rgba(115, 112, 112, 0.1058823529);
+}
+.hero-container .editprofilebox {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  overflow: auto;
+  padding: 10px;
+  z-index: 2;
+}
+.hero-container .editprofilebox .editprofile {
+  margin: auto;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  overflow: auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.hero-container .editprofilebox .editprofile .headerprofile {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.hero-container .editprofilebox .editprofile .headerprofile i {
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.hero-container .editprofilebox .editprofile .headerprofile i:hover {
+  background-color: rgba(70, 68, 68, 0.2392156863);
+}
+.hero-container .editprofilebox .editprofile .profileimage {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: auto;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+.hero-container .editprofilebox .editprofile .profileimage img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.hero-container .editprofilebox .editprofile .upload-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.hero-container .editprofilebox .editprofile .upload-btn .upload,
+.hero-container .editprofilebox .editprofile .upload-btn .remove {
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 550;
+  font-size: 15px;
+  border: rgba(150, 146, 146, 0.3019607843) 1px solid;
+  background-color: white;
+  width: min(100%, 135px);
+}
+.hero-container .editprofilebox .editprofile .upload-btn .upload:hover,
+.hero-container .editprofilebox .editprofile .upload-btn .remove:hover {
+  border: black 1px solid;
+}
+.hero-container .editprofilebox .editprofile .remove {
+  color: rgba(70, 68, 68, 0.8470588235);
+  border: none !important;
+}
+.hero-container .editprofilebox .editprofile .remove:hover {
+  border: none !important;
+  background-color: rgba(120, 117, 117, 0.0901960784) !important;
+}
+.hero-container .editprofilebox .editprofile #file {
+  display: none;
+}
+.hero-container .editprofilebox .editprofile .option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 5px;
+}
+.hero-container .editprofilebox .editprofile .option span:nth-child(1),
+.hero-container .editprofilebox .editprofile .option span:nth-child(3) {
+  flex-grow: 1;
+  border-top: 1px solid rgba(0, 0, 0, 0.258);
+}
+.hero-container .editprofilebox .editprofile .option span:nth-child(2) {
+  color: rgba(26, 25, 25, 0.4901960784);
+}
+.hero-container .editprofilebox .editprofile .pattern {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  gap: 10px;
+}
+.hero-container .editprofilebox .editprofile .pattern input[type=radio] {
+  cursor: pointer;
+  appearance: none;
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  position: relative;
+}
+.hero-container .editprofilebox .editprofile .pattern input[type=radio]:hover::after {
+  position: absolute;
+  content: "\ea13";
+  font-family: remixicon;
+  height: 18px;
+  width: 18px;
+  border: 2px solid white;
+  background-color: rgb(221, 220, 220);
+  border-radius: 50%;
+  top: -3px;
+  right: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+}
+.hero-container .editprofilebox .editprofile .pattern input[type=radio]:checked::after {
+  position: absolute;
+  content: "\eb7b";
+  font-family: remixicon;
+  height: 18px;
+  width: 18px;
+  border: 2px solid white;
+  background-color: #00ab6b;
+  border-radius: 50%;
+  top: -3px;
+  right: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+}
+.hero-container .editprofilebox .editprofile .pattern input[type=radio].one {
+  background: url("../../Images/1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.hero-container .editprofilebox .editprofile .pattern input[type=radio].two {
+  background: url("../../Images/2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.hero-container .editprofilebox .editprofile .pattern input[type=radio].three {
+  background: url("../../Images/3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.hero-container .editprofilebox .editprofile .pattern input[type=radio].four {
+  background: url("../../Images/4.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.hero-container .editprofilebox .editprofile .pattern input[type=radio].five {
+  background: url("../../Images/5.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.hero-container .editprofilebox .editprofile .name {
+  margin-bottom: 15px;
+}
+.hero-container .editprofilebox .editprofile .name .nochange {
+  display: flex;
+  align-items: center;
+  cursor: context-menu;
+}
+.hero-container .editprofilebox .editprofile .name .nochange .text {
+  flex-grow: 1;
+}
+.hero-container .editprofilebox .editprofile .name .nochange i {
+  padding: 5px;
+  font-size: 25px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.hero-container .editprofilebox .editprofile .name .nochange i:hover {
+  background-color: rgba(44, 42, 42, 0.2823529412);
+}
+.hero-container .editprofilebox .editprofile .name .change {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  border: 2px solid black;
+  overflow: hidden;
+}
+.hero-container .editprofilebox .editprofile .name .change input {
+  width: 100%;
+  outline: none;
+  padding: 10px;
+  border: none;
+  font-size: 16px;
+}
+.hero-container .editprofilebox .editprofile .name .change i {
+  color: white;
+  padding: 10px 20px;
+  font-size: 22px;
+  background-color: #464444;
+  cursor: pointer;
+}
+.hero-container .editprofilebox .editprofile .name .error {
+  color: red;
+  font-size: 13px;
+  margin-top: 5px;
+}
+.hero-container .editprofilebox .editprofile .apply {
+  background-color: #00ab6b;
+  width: 80px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  margin-left: auto;
+  margin-bottom: 15px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-container .editprofilebox .editprofile .option .danger {
+  color: red !important;
+  font-weight: 600 !important;
+}
+.hero-container .editprofilebox .editprofile .delete-account {
+  background-color: #00ab6b;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 40px;
+  color: white;
+  font-size: 15px;
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.hero-container .editprofilebox .editprofile .delete-account:hover {
+  background-color: rgba(0, 171, 108, 0.8588235294);
+}
+.hero-container .delete-container {
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  padding: 10px;
+  overflow: auto;
+  z-index: 2;
+}
+.hero-container .delete-container .delete-account {
+  background-color: white;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: min(100%, 380px);
+}
+.hero-container .delete-container .delete-account .delete-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.hero-container .delete-container .delete-account .delete-header i {
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.hero-container .delete-container .delete-account .delete-header i:hover {
+  background-color: rgba(44, 42, 42, 0.1921568627);
+}
+.hero-container .delete-container .delete-account .delete-message {
+  background-color: #fcf6e5;
+  padding: 15px;
+  border-radius: 10px;
+  line-height: 25px;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+.hero-container .delete-container .delete-account .delete-message p:nth-child(1) {
+  font-weight: 650;
+}
+.hero-container .delete-container .delete-account .delete-message p:nth-child(1) i {
+  font-size: 17px;
+  color: #eac560;
+}
+.hero-container .delete-container .delete-account .delete-message p:nth-child(2) {
+  margin-left: 23px;
+  color: #7b7979;
+}
+.hero-container .delete-container .delete-account form .password-box {
+  color: black;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.hero-container .delete-container .delete-account form .password-box input {
+  width: 100%;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.26);
+  padding: 10px;
+  margin: 10px 0;
+}
+.hero-container .delete-container .delete-account form .password-box input:hover {
+  border: 1px solid rgba(0, 0, 0, 0.952);
+}
+.hero-container .delete-container .delete-account form .password-box input:focus {
+  border: 1px solid rgba(0, 0, 0, 0.952);
+}
+.hero-container .delete-container .delete-account form .password-box input::placeholder {
+  color: rgba(70, 68, 68, 0.2862745098);
+}
+.hero-container .delete-container .delete-account form .buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 15px;
+}
+.hero-container .delete-container .delete-account form .buttons .cancel,
+.hero-container .delete-container .delete-account form .buttons .delete {
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.hero-container .delete-container .delete-account form .buttons .cancel {
+  background-color: transparent;
+  color: rgba(70, 68, 68, 0.7490196078);
+  padding: 10px 20px;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.hero-container .delete-container .delete-account form .buttons .cancel:hover {
+  background-color: #f0f0f0;
+}
+.hero-container .delete-container .delete-account form .buttons .delete {
+  background-color: #e34848;
+  color: white;
+  width: 140px;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding: 0 20px;
+}
+.hero-container .delete-container .delete-account form .buttons .delete:hover {
+  background-color: rgba(227, 72, 72, 0.753);
+}
+.hero-container .hem-menu-container {
+  background-color: transparent;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 100;
+}
+.hero-container .hem-menu-container.go .hem-menu {
+  animation: go 0.25s linear;
+}
+.hero-container .hem-menu-container .hem-menu {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  animation: come 0.25s linear;
+  display: flex;
+  flex-direction: column;
+}
+.hero-container .hem-menu-container .hem-menu .hem-menu-slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  overflow: auto;
+  gap: 20px;
+}
+.hero-container .hem-menu-container .hem-menu .hem-menu-slider .hem-menu-footer {
+  display: flex;
+  gap: 10px;
+  width: min(250px, 100%);
+  justify-content: space-between;
+  margin: 0 auto;
+  overflow: auto;
+  flex-shrink: 0;
+}
+.hero-container .hem-menu-container .hem-menu .hem-menu-slider .hem-menu-footer .insta,
+.hero-container .hem-menu-container .hem-menu .hem-menu-slider .hem-menu-footer .pinterest,
+.hero-container .hem-menu-container .hem-menu .hem-menu-slider .hem-menu-footer .twitter,
+.hero-container .hem-menu-container .hem-menu .hem-menu-slider .hem-menu-footer .fb {
+  background-color: rgba(67, 71, 70, 0.6941176471);
+  display: flex;
+  padding: 3px;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.hero-container .hem-menu-container .hem-menu .hem-menu-slider .hem-menu-footer .insta i,
+.hero-container .hem-menu-container .hem-menu .hem-menu-slider .hem-menu-footer .pinterest i,
+.hero-container .hem-menu-container .hem-menu .hem-menu-slider .hem-menu-footer .twitter i,
+.hero-container .hem-menu-container .hem-menu .hem-menu-slider .hem-menu-footer .fb i {
+  cursor: pointer;
+  font-size: 25px;
+}
+.hero-container .hem-menu-container .hem-menu .hem-menu-slider .hem-menu-footer .insta {
+  color: #ff03bc;
+}
+.hero-container .hem-menu-container .hem-menu .hem-menu-slider .hem-menu-footer .pinterest {
+  color: red;
+}
+.hero-container .hem-menu-container .hem-menu .hem-menu-slider .hem-menu-footer .twitter {
+  color: white;
+}
+.hero-container .hem-menu-container .hem-menu .hem-menu-slider .hem-menu-footer .fb {
+  color: blue;
+}
+.hero-container .hem-menu-container .login {
+  background-color: #191b26;
+  color: white;
+}
+.hero-container .hem-menu-container .login .hem-menu-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.114);
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+  cursor: context-menu;
+}
+.hero-container .hem-menu-container .login .hem-menu-header .accaunt-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.hero-container .hem-menu-container .login .hem-menu-header .accaunt-logo .account-img {
+  background-color: red;
+  display: flex;
+  border-radius: 50%;
+  overflow: hidden;
+  height: 50px;
+  width: 50px;
+}
+.hero-container .hem-menu-container .login .hem-menu-header .accaunt-logo .account-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.hero-container .hem-menu-container .login .hem-menu-header .accaunt-logo .account-name {
+  background-color: #191b26;
+  max-width: 300px;
+  overflow: hidden;
+  font-weight: 600;
+  color: white;
+}
+.hero-container .hem-menu-container .login .hem-menu-header i {
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 15px;
+  padding: 5px;
+}
+.hero-container .hem-menu-container .login .hem-menu-slider {
+  padding: 15px 25px;
+}
+.hero-container .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-email {
+  cursor: context-menu;
+  word-break: break-all;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 8px;
+  border-radius: 5px;
+}
+.hero-container .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-email:hover {
+  background-color: rgba(255, 255, 255, 0.233);
+}
+.hero-container .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-main-editprofile {
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.hero-container .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-main-editprofile:hover {
+  background-color: rgba(255, 255, 255, 0.233);
+}
+.hero-container .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-safeSearch {
+  padding: 8px;
+  font-size: 17px;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: rgba(166, 164, 164, 0.139);
+  margin: 10px 0;
+}
+.hero-container .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-safeSearch label {
+  display: block;
+  cursor: pointer;
+}
+.hero-container .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-safeSearch label:hover .safeSearch-con .switch-con {
+  background-color: rgba(245, 240, 240, 0.276);
+}
+.hero-container .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-safeSearch label input {
+  display: none;
+}
+.hero-container .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-safeSearch label .safeSearch-con {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 18px 0;
+  gap: 10px;
+}
+.hero-container .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-safeSearch label .safeSearch-con .text {
+  flex-grow: 1;
+  font-weight: 500;
+}
+.hero-container .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-safeSearch label .safeSearch-con .switch-con {
+  background-color: rgba(245, 240, 240, 0.151);
+  height: 25px;
+  width: 40px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 3px;
+}
+.hero-container .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-safeSearch label .safeSearch-con .switch-con div {
+  background-color: white;
+  height: 21px;
+  width: 21px;
+  border-radius: 50%;
+  transition: all 0.13s linear;
+}
+.hero-container .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-safeSearch label .safeSearch-message {
+  font-size: 12px;
+  padding-bottom: 15px;
+}
+.hero-container .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-safeSearch label input:checked + .safeSearch-con .switch-con {
+  background-color: #00ab6b;
+}
+.hero-container .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-safeSearch label input:checked + .safeSearch-con .switch-con div {
+  transition: all 0.13s linear;
+  transform: translateX(13px);
+}
+.hero-container .hem-menu-container .login .hem-menu-slider .hem-menu-main-user .hem-menu-safeSearch label:hover input:checked + .safeSearch-con .switch-con {
+  background-color: #0ec884;
+}
+.hero-container .hem-menu-container .login .hem-menu-slider .hem-menu-main-user button {
+  width: 100%;
+  text-align: start;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  background-color: transparent;
+}
+.hero-container .hem-menu-container .login .hem-menu-slider .hem-menu-main-user button:hover {
+  background-color: rgba(108, 104, 104, 0.226);
+}
+.hero-container .hem-menu-container .login .hem-menu-slider .hem-menu-footer .insta,
+.hero-container .hem-menu-container .login .hem-menu-slider .hem-menu-footer .pinterest,
+.hero-container .hem-menu-container .login .hem-menu-slider .hem-menu-footer .twitter,
+.hero-container .hem-menu-container .login .hem-menu-slider .hem-menu-footer .fb {
+  background-color: rgba(67, 71, 70, 0.6941176471);
+}
+.hero-container .hem-menu-container .hem {
+  background-color: white;
+  color: black;
+}
+.hero-container .hem-menu-container .hem .hem-menu-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.098);
+  padding: 12px 15px;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero-container .hem-menu-container .hem .hem-menu-header .logo {
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-family: rezland, sans-serif;
+  font-size: 35px;
+}
+.hero-container .hem-menu-container .hem .hem-menu-header i {
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 15px;
+  padding: 5px;
+}
+.hero-container .hem-menu-container .hem .hem-menu-header i:hover {
+  background-color: rgba(0, 0, 0, 0.043);
+}
+.hero-container .hem-menu-container .hem .hem-menu-slider {
+  padding: 15px;
+}
+.hero-container .hem-menu-container .hem .hem-menu-slider .hem-menu-main-hem {
+  display: flex;
+  flex-direction: column;
+  color: #6c6d74;
+}
+.hero-container .hem-menu-container .hem .hem-menu-slider .hem-menu-main-hem div {
+  padding: 15px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.hero-container .hem-menu-container .hem .hem-menu-slider .hem-menu-main-hem div:hover {
+  background-color: rgba(25, 27, 38, 0.1294117647);
+}
+.hero-container .hem-menu-container .hem .hem-menu-slider .hem-menu-main-hem div.green {
+  color: #09d88c;
+}
+.hero-container .hem-menu-container .hem .hem-menu-slider .hem-menu-main-hem div:nth-child(1) {
+  font-weight: 600;
+}
+.hero-container .hem-menu-container .hem .hem-menu-slider .hem-menu-main-hem div:not(:nth-child(1)) {
+  padding-left: 25px;
+  font-weight: 350;
+  font-size: 14px;
+}
+.hero-container .hem-menu-container .hem .hem-menu-slider .hem-menu-main-hem div:not(:nth-child(1)):hover {
+  color: #09d88c;
+}
+.hero-container .hem-menu-container .hem .hem-menu-slider .hem-menu-main-hem div:not(:nth-child(1)) i {
+  font-size: 20px;
+}
+.hero-container .hem-menu-container .hem .hem-menu-slider .hem-menu-footer .insta,
+.hero-container .hem-menu-container .hem .hem-menu-slider .hem-menu-footer .pinterest,
+.hero-container .hem-menu-container .hem .hem-menu-slider .hem-menu-footer .twitter,
+.hero-container .hem-menu-container .hem .hem-menu-slider .hem-menu-footer .fb {
+  background-color: rgba(205, 211, 210, 0.5254901961);
+}
+.hero-container .hem-menu-container .hem .hem-menu-slider .hem-menu-footer .twitter {
+  color: black;
+}
+.hero-container .hero-main-con {
+  background-color: transparent;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+.hero-container .hero-main-con .hero-main-title {
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+}
+.hero-container .hero-main-con .hero-main-cat {
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  overflow: auto;
+  scrollbar-width: none;
+  width: min(565px, 100%);
+}
+.hero-container .hero-main-con .hero-main-cat .cat-div {
+  text-decoration: none;
+  cursor: pointer;
+  text-wrap: nowrap;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+}
+.hero-container .hero-main-con .hero-main-cat .cat-div.active {
+  background-color: white;
+  color: black;
+}
+.hero-container .hero-main-con .hero-main-cat .cat-div:hover:not(.active) {
+  background-color: rgba(255, 255, 255, 0.1176470588);
+}
+.hero-container .hero-main-con .hero-main-search {
+  background-color: rgba(255, 255, 255, 0.2235294118);
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+  width: min(600px, 95%);
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 0 10px;
+}
+.hero-container .hero-main-con .hero-main-search i {
+  margin: auto;
+  cursor: pointer;
+  font-size: 18px;
+  color: white;
+  flex-shrink: 0;
+}
+.hero-container .hero-main-con .hero-main-search i:nth-child(1) {
+  padding: 3px;
+}
+.hero-container .hero-main-con .hero-main-search i:nth-child(3) {
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.hero-container .hero-main-con .hero-main-search i:nth-child(3):hover {
+  background-color: rgba(221, 222, 225, 0.2196078431);
+}
+.hero-container .hero-main-con .hero-main-search input {
+  width: 100%;
+  font-size: 16px;
+  padding: 0 10px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: white;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.hero-container .hero-main-con .hero-main-search input::placeholder {
+  color: white;
+}
+.hero-container .hero-main-con .hero-main-search input:not(:placeholder-shown) ~ i {
+  display: block;
+}
+.hero-container .hero-main-con .hero-main-keyword {
+  background-color: transparent;
+  width: min(750px, 100%);
+  padding: 0 15px;
+  scrollbar-width: none;
+  overflow: auto;
+  white-space: nowrap;
+  text-align: center;
+}
+.hero-container .hero-main-con .hero-main-keyword div {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.2235294118);
+  backdrop-filter: blur(50px);
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 5px 8px;
+  flex-shrink: 0;
+  text-wrap: nowrap;
+  margin: 0 5px;
+  font-size: 14px;
+}
+.hero-container .hero-main-con .hero-main-keyword div:hover {
+  background-color: rgba(255, 255, 255, 0.3843137255);
+}
+.hero-container .hero-main-con .hero-main-keyword div .keyword-div {
+  text-decoration: none;
+  color: white;
+}
+.hero-container .hero-footer-con {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 15px 20px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8588235294);
+}
+.hero-container .hero-footer-con div .div-span {
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9215686275);
+}
+.hero-container .hero-footer-con div .div-span:hover {
+  color: white;
+}
+.hero-container .hero-footer-con .left {
+  float: left;
+}
+.hero-container .hero-footer-con .right {
+  float: right;
+}
+.hero-container .hero-login-signup-con {
+  background-color: rgba(0, 0, 0, 0.178);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 2;
+  border: none;
+}
+.hero-container .hero-login-signup-con > div {
+  padding: 10px;
+  background-color: transparent;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-container .hero-login-signup-con > div .login-signup {
+  background-color: white;
+  max-height: 90vh;
+  width: 550px;
+  overflow: auto;
+  scrollbar-width: none;
+}
+.hero-container .hero-login-signup-con > div .login-signup .login-signup-header {
+  background-color: black;
+  color: white;
+  padding: 15px 40px;
+  font-weight: 700;
+  font-size: 17px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+.hero-container .hero-login-signup-con > div .login-signup .login-signup-header div:nth-child(2) {
+  display: inline;
+  border-radius: 50%;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 5px;
+  cursor: pointer;
+}
+.hero-container .hero-login-signup-con > div .login-signup .login-signup-header div:nth-child(2):hover {
+  background-color: rgba(255, 255, 255, 0.354);
+}
+.hero-container .hero-login-signup-con > div .login-signup .login-signup-body {
+  height: 100%;
+  padding: 20px 30px;
+}
+.hero-container .hero-login-signup-con > div .login-signup .login-signup-body .login-signup-upper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.hero-container .hero-login-signup-con > div .login-signup .login-signup-body .login-signup-upper .login-signup-option {
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0 20px;
+}
+.hero-container .hero-login-signup-con > div .login-signup .login-signup-body .login-signup-upper .login-signup-option button {
+  width: 100%;
+  background-color: white;
+  border-style: solid;
+  border-width: 0 0 1px 0;
+  border-color: rgba(0, 0, 0, 0.078);
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.575);
+  cursor: pointer;
+}
+.hero-container .hero-login-signup-con > div .login-signup .login-signup-body .login-signup-upper .login-signup-option button:hover {
+  color: black;
+  border-color: black;
+}
+.hero-container .hero-login-signup-con > div .login-signup .login-signup-body .login-signup-upper .login-signup-option button.clicked-btn {
+  border-color: #0ec884;
+  color: black;
+}
+.hero-container .hero-login-signup-con > div .login-signup .login-signup-body .login-signup-upper .social-login {
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, 0.233);
+  border-radius: 60px;
+  overflow: hidden;
+  padding: 10px;
+  gap: 10px;
+  justify-content: center;
+  font-size: 14px;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.15s linear;
+}
+.hero-container .hero-login-signup-con > div .login-signup .login-signup-body .login-signup-upper .social-login:hover {
+  background-color: rgba(0, 0, 255, 0.071);
+  border: 1px solid rgba(0, 0, 255, 0.094);
+}
+.hero-container .hero-login-signup-con > div .login-signup .login-signup-body .login-signup-upper .social-login div {
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+}
+.hero-container .hero-login-signup-con > div .login-signup .login-signup-body .login-signup-upper .social-login img {
+  background-color: aqua;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+}
+.hero-container .hero-login-signup-con > div .login-signup .login-signup-body .login-signup-upper .hor-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  height: 22px;
+}
+.hero-container .hero-login-signup-con > div .login-signup .login-signup-body .login-signup-upper .hor-line span:not(:nth-child(2)) {
+  width: 100%;
+  border-style: solid;
+  border-width: 1px 0 0 0;
+  border-color: rgba(0, 0, 0, 0.187);
+}
+.hero-container .hero-login-signup-con > div .login-signup .login-signup-body .login-signup-upper .hor-line span:nth-child(2) {
+  height: 100%;
+  padding: 0 20px;
+  color: rgba(0, 0, 0, 0.763);
+}
+.hero-container .hero-login-signup-con > div .login-signup .login-signup-body .login-signup-lower {
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  padding: 20px 0;
+}
+.hero-container .hero-login-signup-con > div .login-signup .login-signup-body .login-signup-lower .name-con {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.hero-container .hero-login-signup-con > div .login-signup .login-signup-body .login-signup-lower .name-con input {
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.3294117647);
+  border-radius: 5px;
+  padding: 12px 10px;
+  transition: all 0.12s linear;
+}
+.hero-container .hero-login-signup-con > div .login-signup .login-signup-body .login-signup-lower .name-con input:hover {
+  border: 1px solid rgba(0, 0, 0, 0.7725490196);
+}
+.hero-container .hero-login-signup-con > div .login-signup .login-signup-body .login-signup-lower .name-con span {
+  color: red;
+  cursor: context-menu;
+}
+.hero-container .hero-login-signup-con > div .login-signup .login-signup-body .login-signup-lower .email-con {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.hero-container .hero-login-signup-con > div .login-signup .login-signup-body .login-signup-lower .email-con input {
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.3294117647);
+  border-radius: 5px;
+  padding: 12px 10px;
+  transition: all 0.12s linear;
+}
+.hero-container .hero-login-signup-con > div .login-signup .login-signup-body .login-signup-lower .email-con input:hover {
+  border: 1px solid rgba(0, 0, 0, 0.7725490196);
+}
+.hero-container .hero-login-signup-con > div .login-signup .login-signup-body .login-signup-lower .email-con span {
+  color: red;
+  cursor: context-menu;
+}
+.hero-container .hero-login-signup-con > div .login-signup .login-signup-body .login-signup-lower .pass-con {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.hero-container .hero-login-signup-con > div .login-signup .login-signup-body .login-signup-lower .pass-con .input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.hero-container .hero-login-signup-con > div .login-signup .login-signup-body .login-signup-lower .pass-con .input input {
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.3294117647);
+  border-radius: 5px;
+  padding: 12px 10px;
+  width: 100%;
+  transition: all 0.12s linear;
+}
+.hero-container .hero-login-signup-con > div .login-signup .login-signup-body .login-signup-lower .pass-con .input input:hover {
+  border: 1px solid rgba(0, 0, 0, 0.7725490196);
+}
+.hero-container .hero-login-signup-con > div .login-signup .login-signup-body .login-signup-lower .pass-con .input div {
+  position: absolute;
+  right: 5px;
+  padding: 0 5px;
+}
+.hero-container .hero-login-signup-con > div .login-signup .login-signup-body .login-signup-lower .pass-con span {
+  color: red;
+  cursor: context-menu;
+}
+.hero-container .hero-login-signup-con > div .login-signup .login-signup-body .login-signup-lower .pass-con .message {
+  color: rgba(0, 0, 0, 0.612);
+  cursor: context-menu;
+}
+.hero-container .hero-login-signup-con > div .login-signup .login-signup-body .login-signup-lower button {
+  background-color: #00ab6b;
+  border: none;
+  color: white;
+  border-radius: 20px;
+  padding: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.1s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+.hero-container .hero-login-signup-con > div .login-signup .login-signup-body .login-signup-lower button:hover {
+  background-color: rgba(0, 171, 108, 0.8);
+}
+.hero-container .hero-login-signup-con > div .login-signup .login-signup-body .login-signup-lower .forgot {
+  cursor: pointer;
+  color: rgba(0, 171, 108, 0.7960784314);
+  font-weight: 600;
+  width: fit-content;
+  padding-right: 30px;
+}
+.hero-container .hero-login-signup-con > div .login-signup .login-signup-body .login-signup-lower .forgot:hover {
+  color: #00ab6b;
+}
+.hero-container .forgot-pass-dialog {
+  background-color: rgba(0, 0, 0, 0.144);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 5;
+  align-content: center;
+  overflow: auto;
+  padding: 5px;
+}
+.hero-container .forgot-pass-dialog .forgot-con {
+  background-color: white;
+  width: min(400px, 100%);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 20px;
+  gap: 50px;
+  margin: auto;
+}
+.hero-container .forgot-pass-dialog .forgot-con .forgot-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.hero-container .forgot-pass-dialog .forgot-con .forgot-header .forgot-header-div {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.hero-container .forgot-pass-dialog .forgot-con .forgot-header .forgot-header-div h2 {
+  padding: 0 35px;
+  font-weight: 600;
+  cursor: context-menu;
+}
+.hero-container .forgot-pass-dialog .forgot-con .forgot-header .forgot-header-div i {
+  transition: all 0.16s linear;
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 3px;
+}
+.hero-container .forgot-pass-dialog .forgot-con .forgot-header .forgot-header-div i:hover {
+  background-color: rgba(0, 0, 0, 0.123);
+}
+.hero-container .forgot-pass-dialog .forgot-con .forgot-header .message {
+  font-size: 14px;
+}
+.hero-container .forgot-pass-dialog .forgot-con form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.hero-container .forgot-pass-dialog .forgot-con form input {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.178);
+  border-radius: 5px;
+  font-size: 15px;
+  padding: 10px;
+  outline: none;
+  transition: all 0.23s linear;
+}
+.hero-container .forgot-pass-dialog .forgot-con form input:hover {
+  border: 1px solid black;
+}
+.hero-container .forgot-pass-dialog .forgot-con form button {
+  background-color: #00ab6b;
+  width: 100%;
+  color: white;
+  padding: 15px;
+  border-radius: 30px;
+  border: none;
+  font-size: 15px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: all 0.15s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.hero-container .forgot-pass-dialog .forgot-con form button:hover {
+  background-color: rgba(0, 171, 108, 0.8509803922);
+}
+.hero-container .forgot-pass-dialog .forgot-con .icons {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-container .forgot-pass-dialog .forgot-con .icons i:nth-child(1) {
+  font-size: 25px;
+  color: #00ab6b;
+}
+.hero-container .forgot-pass-dialog .forgot-con .icons i:nth-child(2) {
+  font-size: 16px;
+  position: absolute;
+  right: 0;
+  padding: 4px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.15s linear;
+}
+.hero-container .forgot-pass-dialog .forgot-con .icons i:nth-child(2):hover {
+  background-color: rgba(0, 0, 0, 0.123);
+}
+.hero-container .forgot-pass-dialog .forgot-con .success-message {
+  font-weight: 700;
+  text-align: center;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 1000px) {
+  .hero-container {
+    height: 320px;
+  }
+}
+@keyframes come {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes go {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 100%;
+  }
+}

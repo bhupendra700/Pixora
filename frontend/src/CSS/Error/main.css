@@ -1,0 +1,1233 @@
+.main3-con {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+  padding-top: 20px;
+}
+.main3-con .container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+.main3-con .container .left {
+  width: 100%;
+}
+.main3-con .container .left > .mob {
+  padding: 0 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main3-con .container .left > .mob .download-btn {
+  width: min(300px, 100%);
+}
+.main3-con .container .left > .mob .download-btn > details {
+  position: relative;
+  z-index: 1;
+}
+.main3-con .container .left > .mob .download-btn > details[open] summary {
+  background-color: #049862;
+}
+.main3-con .container .left > .mob .download-btn > details[open] summary i {
+  transform: rotate(-180deg);
+}
+.main3-con .container .left > .mob .download-btn > details[open] summary:hover {
+  background-color: #049862;
+}
+.main3-con .container .left > .mob .download-btn > details summary {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background-color: #00ab6b;
+  border-radius: 800px;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 650;
+  color: white;
+  cursor: pointer;
+}
+.main3-con .container .left > .mob .download-btn > details summary:hover {
+  background-color: #02c37c;
+}
+.main3-con .container .left > .mob .download-btn > details summary i {
+  transition: all 0.15s linear;
+  font-size: 18px;
+}
+.main3-con .container .left > .mob .download-btn > details > div {
+  position: absolute;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+}
+.main3-con .container .left > .mob .download-btn > details > div .size label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.05s linear;
+}
+.main3-con .container .left > .mob .download-btn > details > div .size label:hover {
+  background-color: rgba(0, 0, 0, 0.098);
+}
+.main3-con .container .left > .mob .download-btn > details > div .size label:hover input[type=radio]:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  background-color: black;
+  padding: 4px;
+  border-radius: 50%;
+}
+.main3-con .container .left > .mob .download-btn > details > div .size label:hover input[type=radio]:checked {
+  border: 2px solid #01c87f;
+}
+.main3-con .container .left > .mob .download-btn > details > div .size label:hover input[type=radio]:checked:after {
+  background-color: #01c87f;
+}
+.main3-con .container .left > .mob .download-btn > details > div .size label:hover input[type=radio]:checked + div {
+  color: #01c87f;
+}
+.main3-con .container .left > .mob .download-btn > details > div .size label input[type=radio] {
+  appearance: none;
+  border: 2px solid rgba(0, 0, 0, 0.388);
+  padding: 7px;
+  border-radius: 50%;
+  position: relative;
+}
+.main3-con .container .left > .mob .download-btn > details > div .size label input[type=radio]:checked {
+  border: 2px solid #00ab6b;
+}
+.main3-con .container .left > .mob .download-btn > details > div .size label input[type=radio]:checked:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  background-color: #00ab6b;
+  padding: 4px;
+  border-radius: 50%;
+}
+.main3-con .container .left > .mob .download-btn > details > div .size label input[type=radio]:checked + div {
+  color: #00ab6b;
+}
+.main3-con .container .left > .mob .download-btn > details > div .size label > div {
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: rgba(0, 0, 0, 0.587);
+  gap: 5px;
+}
+.main3-con .container .left > .mob .download-btn > details > div .size label > div > div {
+  text-align: center;
+  word-break: break-all;
+}
+.main3-con .container .left > .mob .download-btn > details > div .size label > div > div:nth-child(1) {
+  text-align: start;
+}
+.main3-con .container .left > .mob .download-btn > details > div .button {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 0;
+  flex-wrap: wrap;
+}
+.main3-con .container .left > .mob .download-btn > details > div .button a {
+  text-decoration: none;
+  background-color: #00ab6b;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 500px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.15s linear;
+}
+.main3-con .container .left > .mob .download-btn > details > div .button a:hover {
+  background-color: #01c87f;
+}
+.main3-con .container .left > .mob .download-btn > details > div .button a:nth-child(2) {
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.167);
+  color: black;
+}
+.main3-con .container .left > .mob .download-btn > details > div .button a:nth-child(2):hover {
+  border: 1px solid black;
+}
+.main3-con .container .left .image-vid-web {
+  height: 500px;
+  padding-left: 20px;
+  display: flex;
+  justify-content: center;
+}
+.main3-con .container .left .image-vid-web img,
+.main3-con .container .left .image-vid-web video {
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+.main3-con .container .left .image-vid-mob {
+  width: 100%;
+  display: flex;
+}
+.main3-con .container .left .image-vid-mob img,
+.main3-con .container .left .image-vid-mob video {
+  width: 100%;
+  object-fit: cover;
+}
+.main3-con .container .left > .card {
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.main3-con .container .left > .card .download-btn {
+  width: 50%;
+}
+.main3-con .container .left > .card .download-btn > details {
+  position: relative;
+}
+.main3-con .container .left > .card .download-btn > details[open] summary {
+  background-color: #049862;
+}
+.main3-con .container .left > .card .download-btn > details[open] summary i {
+  transform: rotate(-180deg);
+}
+.main3-con .container .left > .card .download-btn > details[open] summary:hover {
+  background-color: #049862;
+}
+.main3-con .container .left > .card .download-btn > details summary {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background-color: #00ab6b;
+  border-radius: 800px;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 650;
+  color: white;
+  cursor: pointer;
+}
+.main3-con .container .left > .card .download-btn > details summary:hover {
+  background-color: #02c37c;
+}
+.main3-con .container .left > .card .download-btn > details summary i {
+  transition: all 0.15s linear;
+  font-size: 18px;
+}
+.main3-con .container .left > .card .download-btn > details > div {
+  position: absolute;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+}
+.main3-con .container .left > .card .download-btn > details > div .size label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.05s linear;
+}
+.main3-con .container .left > .card .download-btn > details > div .size label:hover {
+  background-color: rgba(0, 0, 0, 0.098);
+}
+.main3-con .container .left > .card .download-btn > details > div .size label:hover input[type=radio]:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  background-color: black;
+  padding: 4px;
+  border-radius: 50%;
+}
+.main3-con .container .left > .card .download-btn > details > div .size label:hover input[type=radio]:checked {
+  border: 2px solid #01c87f;
+}
+.main3-con .container .left > .card .download-btn > details > div .size label:hover input[type=radio]:checked:after {
+  background-color: #01c87f;
+}
+.main3-con .container .left > .card .download-btn > details > div .size label:hover input[type=radio]:checked + div {
+  color: #01c87f;
+}
+.main3-con .container .left > .card .download-btn > details > div .size label input[type=radio] {
+  appearance: none;
+  border: 2px solid rgba(0, 0, 0, 0.388);
+  padding: 7px;
+  border-radius: 50%;
+  position: relative;
+}
+.main3-con .container .left > .card .download-btn > details > div .size label input[type=radio]:checked {
+  border: 2px solid #00ab6b;
+}
+.main3-con .container .left > .card .download-btn > details > div .size label input[type=radio]:checked:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  background-color: #00ab6b;
+  padding: 4px;
+  border-radius: 50%;
+}
+.main3-con .container .left > .card .download-btn > details > div .size label input[type=radio]:checked + div {
+  color: #00ab6b;
+}
+.main3-con .container .left > .card .download-btn > details > div .size label > div {
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: rgba(0, 0, 0, 0.587);
+  gap: 5px;
+}
+.main3-con .container .left > .card .download-btn > details > div .size label > div > div {
+  white-space: nowrap;
+  width: 33%;
+  text-align: center;
+}
+.main3-con .container .left > .card .download-btn > details > div .size label > div > div:nth-child(1) {
+  text-align: start;
+}
+.main3-con .container .left > .card .download-btn > details > div .button {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 0;
+}
+.main3-con .container .left > .card .download-btn > details > div .button a {
+  text-decoration: none;
+  background-color: #00ab6b;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 500px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.15s linear;
+}
+.main3-con .container .left > .card .download-btn > details > div .button a:hover {
+  background-color: #01c87f;
+}
+.main3-con .container .left > .card .download-btn > details > div .button a:nth-child(2) {
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.167);
+  color: black;
+}
+.main3-con .container .left > .card .download-btn > details > div .button a:nth-child(2):hover {
+  border: 1px solid black;
+}
+.main3-con .container .left > .card .social-icon {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 50%;
+  justify-content: space-between;
+}
+.main3-con .container .left > .card .social-icon .box {
+  border: 1px solid rgba(0, 0, 0, 0.139);
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.15s linear;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.587);
+}
+.main3-con .container .left > .card .social-icon .box i {
+  color: black;
+}
+.main3-con .container .left > .card .social-icon .box.like, .main3-con .container .left > .card .social-icon .box.save, .main3-con .container .left > .card .social-icon .box.comment {
+  padding: 10px 25px;
+}
+.main3-con .container .left > .card .social-icon .box:hover {
+  border-color: black;
+}
+.main3-con .container .left > .card .social-icon.mob {
+  align-items: center;
+  width: 100%;
+  justify-content: start;
+}
+.main3-con .container .left .user-con {
+  padding: 0 20px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 20px;
+}
+.main3-con .container .left .user-con .user {
+  cursor: pointer;
+}
+.main3-con .container .left .user-con .user:hover > .link > .user-icon {
+  background-color: rgba(0, 0, 0, 0.071);
+  transition: all 0.15s linear;
+}
+.main3-con .container .left .user-con .user:hover > .link > .user-icon img {
+  mix-blend-mode: darken;
+}
+.main3-con .container .left .user-con .user > .link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
+.main3-con .container .left .user-con .user > .link .user-icon {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.main3-con .container .left .user-con .user > .link .user-icon img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.main3-con .container .left .user-con .user > .link .name {
+  font-weight: 600;
+  color: black;
+  font-size: 17px;
+}
+.main3-con .container .left .user-con .user-info {
+  width: 100%;
+  cursor: context-menu;
+  font-weight: 400;
+}
+.main3-con .container .left .keywords {
+  padding: 30px 20px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.main3-con .container .left .keywords .words {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main3-con .container .left .keywords .words .text {
+  border: 1px solid rgba(0, 0, 0, 0.178);
+  border-radius: 5px;
+  padding: 5px;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+.main3-con .container .left .keywords .words .text:hover {
+  border-color: black;
+}
+.main3-con .container .left > .hr {
+  border-top: 1px solid rgba(0, 0, 0, 0.075);
+  padding-bottom: 30px;
+}
+.main3-con .container .left .main-card-con {
+  position: relative;
+  margin-top: 10px;
+  width: 100%;
+}
+.main3-con .container .left .main-card-con .frame .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 20px;
+}
+.main3-con .container .left .main-card-con .frame .container > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.main3-con .container .left .main-card-con .frame .container > div .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  position: relative;
+}
+.main3-con .container .left .main-card-con .frame .container > div .card:has(video)::after {
+  position: absolute;
+  content: "\f51d";
+  font-family: remixicon;
+  padding: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.242);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.main3-con .container .left .main-card-con .frame .container > div .card:hover::after {
+  content: "";
+  background-color: transparent;
+}
+.main3-con .container .left .main-card-con .frame .container > div .card img {
+  width: 100%;
+  object-fit: cover;
+}
+.main3-con .container .left .main-card-con .frame .container > div .card video {
+  width: 100%;
+  object-fit: cover;
+}
+.main3-con .container .left .main-card-con .frame .button-LM {
+  background-color: transparent;
+  padding-top: 30px;
+  text-align: center;
+}
+.main3-con .container .left .main-card-con .frame .button-LM button {
+  padding: 10px 20px;
+  border: 1px solid rgba(0, 0, 0, 0.379);
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 650;
+  font-size: 14px;
+  background-color: transparent;
+  outline: none;
+}
+.main3-con .container .left .main-card-con .frame .button-LM button:hover {
+  border: 1px solid black;
+}
+.main3-con .container .right {
+  width: 400px;
+  padding-left: 5px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+  flex-shrink: 0;
+}
+.main3-con .container .right .card {
+  position: sticky;
+  top: 25px;
+  background-color: white;
+  padding: 10px 0;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.main3-con .container .right .card > details {
+  position: relative;
+  margin: 0 20px;
+}
+.main3-con .container .right .card > details[open] summary {
+  background-color: #049862;
+}
+.main3-con .container .right .card > details[open] summary i {
+  transform: rotate(-180deg);
+}
+.main3-con .container .right .card > details[open] summary:hover {
+  background-color: #049862;
+}
+.main3-con .container .right .card > details summary {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background-color: #00ab6b;
+  border-radius: 800px;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 650;
+  color: white;
+  cursor: pointer;
+}
+.main3-con .container .right .card > details summary:hover {
+  background-color: #02c37c;
+}
+.main3-con .container .right .card > details summary i {
+  transition: all 0.15s linear;
+  font-size: 18px;
+}
+.main3-con .container .right .card > details > div {
+  position: absolute;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+}
+.main3-con .container .right .card > details > div .size label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.05s linear;
+}
+.main3-con .container .right .card > details > div .size label:hover {
+  background-color: rgba(0, 0, 0, 0.098);
+}
+.main3-con .container .right .card > details > div .size label:hover input[type=radio]:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  background-color: black;
+  padding: 4px;
+  border-radius: 50%;
+}
+.main3-con .container .right .card > details > div .size label:hover input[type=radio]:checked {
+  border: 2px solid #01c87f;
+}
+.main3-con .container .right .card > details > div .size label:hover input[type=radio]:checked:after {
+  background-color: #01c87f;
+}
+.main3-con .container .right .card > details > div .size label:hover input[type=radio]:checked + div {
+  color: #01c87f;
+}
+.main3-con .container .right .card > details > div .size label input[type=radio] {
+  appearance: none;
+  border: 2px solid rgba(0, 0, 0, 0.388);
+  padding: 7px;
+  border-radius: 50%;
+  position: relative;
+}
+.main3-con .container .right .card > details > div .size label input[type=radio]:checked {
+  border: 2px solid #00ab6b;
+}
+.main3-con .container .right .card > details > div .size label input[type=radio]:checked:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  background-color: #00ab6b;
+  padding: 4px;
+  border-radius: 50%;
+}
+.main3-con .container .right .card > details > div .size label input[type=radio]:checked + div {
+  color: #00ab6b;
+}
+.main3-con .container .right .card > details > div .size label > div {
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: rgba(0, 0, 0, 0.587);
+  gap: 5px;
+}
+.main3-con .container .right .card > details > div .size label > div > div {
+  white-space: nowrap;
+  width: 33%;
+  text-align: center;
+}
+.main3-con .container .right .card > details > div .size label > div > div:nth-child(1) {
+  text-align: start;
+}
+.main3-con .container .right .card > details > div .button {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 0;
+}
+.main3-con .container .right .card > details > div .button a {
+  text-decoration: none;
+  background-color: #00ab6b;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 500px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.15s linear;
+}
+.main3-con .container .right .card > details > div .button a:hover {
+  background-color: #01c87f;
+}
+.main3-con .container .right .card > details > div .button a:nth-child(2) {
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.167);
+  color: black;
+}
+.main3-con .container .right .card > details > div .button a:nth-child(2):hover {
+  border: 1px solid black;
+}
+.main3-con .container .right .card .hr {
+  border-top: 1px solid rgba(0, 0, 0, 0.075);
+  margin: 30px 0;
+}
+.main3-con .container .right .card .lower-part {
+  padding: 0 20px;
+}
+.main3-con .container .right .card .lower-part .social-icon {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.main3-con .container .right .card .lower-part .social-icon .box {
+  border: 1px solid rgba(0, 0, 0, 0.139);
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.15s linear;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.587);
+}
+.main3-con .container .right .card .lower-part .social-icon .box i {
+  color: black;
+}
+.main3-con .container .right .card .lower-part .social-icon .box.like, .main3-con .container .right .card .lower-part .social-icon .box.save, .main3-con .container .right .card .lower-part .social-icon .box.comment {
+  width: 100%;
+}
+.main3-con .container .right .card .lower-part .social-icon .box:hover {
+  border-color: black;
+}
+.main3-con .container .right .card .lower-part .details-con {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 14px;
+}
+.main3-con .container .right .card .lower-part .details-con > div {
+  display: flex;
+  justify-content: space-between;
+  cursor: context-menu;
+  color: rgba(0, 0, 0, 0.6);
+}
+.main3-con .container .right .card .lower-part .details-con > div * + * {
+  color: rgba(0, 0, 0, 0.986);
+}
+.main3-con .container .right .card .user-con {
+  padding: 0 20px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 20px;
+}
+.main3-con .container .right .card .user-con .user {
+  cursor: pointer;
+}
+.main3-con .container .right .card .user-con .user:hover > .link > .user-icon {
+  background-color: rgba(0, 0, 0, 0.071);
+  transition: all 0.15s linear;
+}
+.main3-con .container .right .card .user-con .user:hover > .link > .user-icon img {
+  mix-blend-mode: darken;
+}
+.main3-con .container .right .card .user-con .user > .link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
+.main3-con .container .right .card .user-con .user > .link .user-icon {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.main3-con .container .right .card .user-con .user > .link .user-icon img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.main3-con .container .right .card .user-con .user > .link .name {
+  font-weight: 600;
+  color: black;
+  font-size: 17px;
+}
+.main3-con .container .right .card .user-con .user-info {
+  width: 100%;
+  cursor: context-menu;
+  font-weight: 400;
+}
+.main3-con > .hr {
+  border-top: 1px solid rgba(0, 0, 0, 0.075);
+  margin: 30px 0;
+}
+.main3-con .share-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.105);
+  display: flex;
+  padding: 10px;
+  overflow: auto;
+}
+.main3-con .share-dialog .share-con {
+  width: 100%;
+  background-color: white;
+  margin: auto;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  max-width: 650px;
+}
+.main3-con .share-dialog .share-con .share-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  flex-wrap: wrap;
+}
+.main3-con .share-dialog .share-con .share-header > div {
+  font-size: 20px;
+  cursor: context-menu;
+}
+.main3-con .share-dialog .share-con .share-header > i {
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  transition: all 0.15s linear;
+}
+.main3-con .share-dialog .share-con .share-header > i:hover {
+  background-color: rgba(0, 0, 0, 0.164);
+}
+.main3-con .share-dialog .share-con .share-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 0 100px;
+}
+.main3-con .share-dialog .share-con .share-buttons a {
+  text-decoration: none;
+  color: black;
+  border-radius: 50%;
+}
+.main3-con .share-dialog .share-con .share-buttons a button {
+  background-color: rgba(0, 0, 0, 0.059);
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  border: none;
+  cursor: pointer;
+}
+.main3-con .share-dialog .share-con .share-buttons a button i {
+  font-size: 30px;
+}
+.main3-con .share-dialog .share-con .share-buttons a button i.fb {
+  color: #4267b2;
+}
+.main3-con .share-dialog .share-con .share-buttons a button i.twitter {
+  color: black;
+}
+.main3-con .share-dialog .share-con .share-buttons a button i.linkedin {
+  color: #0072b1;
+}
+.main3-con .share-dialog .share-con .share-buttons a button i.whatsapp {
+  color: #38d956;
+}
+.main3-con .share-dialog .share-con .share-buttons a button i.pinterest {
+  color: #e60023;
+}
+.main3-con .share-dialog .share-con .share-buttons a button i.reddit {
+  color: #ff4500;
+}
+.main3-con .share-dialog .share-con .share-buttons.mob1 {
+  padding: 0 60px;
+}
+.main3-con .share-dialog .share-con .share-buttons.mob2 {
+  padding: 0 20px;
+}
+.main3-con .share-dialog .share-con .share-buttons.mob3 {
+  padding: 0 0px;
+}
+.main3-con .share-dialog .share-con .share-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 15px;
+  border: 1px solid rgba(0, 0, 0, 0.167);
+  border-radius: 5px;
+  cursor: context-menu;
+}
+.main3-con .share-dialog .share-con .share-link > div {
+  font-size: 14px;
+  word-break: break-all;
+}
+.main3-con .share-dialog .share-con .share-link > button {
+  font-weight: 600;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  transition: all 0.15s linear;
+  cursor: pointer;
+  background-color: transparent;
+}
+.main3-con .share-dialog .share-con .share-link .copy {
+  color: #00ab6b;
+}
+.main3-con .share-dialog .share-con .share-link .copy:hover {
+  background-color: rgba(6, 224, 6, 0.151);
+}heckbox]:after {
+  content: "\eb7b";
+  position: absolute;
+  font-family: remixicon;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div .transparent-con label:hover input[type=checkbox]:checked:after,
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div .black-white label:hover input[type=checkbox]:checked:after {
+  color: white;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div .transparent-con label input[type=checkbox],
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div .black-white label input[type=checkbox] {
+  appearance: none;
+  position: relative;
+  border: 2px solid rgba(0, 0, 0, 0.082);
+  padding: 10px;
+  border-radius: 3px;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div .transparent-con label input[type=checkbox]:checked,
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div .black-white label input[type=checkbox]:checked {
+  border: 2px solid #00ab6b;
+  background-color: #00ab6b;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div .transparent-con label input[type=checkbox]:checked::before,
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div .black-white label input[type=checkbox]:checked::before {
+  content: "\eb7b";
+  font-family: remixicon;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div .color-con {
+  padding: 10px 0;
+  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(6, 40px);
+  gap: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div .color-con input[type=checkbox] {
+  aspect-ratio: 1/1;
+  position: relative;
+  appearance: none;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.068);
+  cursor: pointer;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div .color-con input[type=checkbox]:hover:after {
+  position: absolute;
+  content: "\ea13";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -4px;
+  right: -4px;
+  padding: 4px;
+  font-family: remixicon;
+  background-color: rgb(230, 230, 230);
+  border-radius: 50%;
+  border: 2px solid white;
+  font-size: 11px;
+  font-weight: 550;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div .color-con input[type=checkbox]:checked:after {
+  position: absolute;
+  content: "\eb7b";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -4px;
+  right: -4px;
+  padding: 4px;
+  font-family: remixicon;
+  background-color: #00ab6b;
+  color: white;
+  border-radius: 50%;
+  border: 2px solid white;
+  font-size: 11px;
+  font-weight: 550;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div .color-con input[type=checkbox]:checked:hover:after {
+  content: "\eb99";
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div .button-con {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div .button-con button {
+  border: none;
+  background-color: transparent;
+  padding: 10px 20px;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.639);
+  cursor: pointer;
+  transition: all 0.15s linear;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div .button-con button:hover {
+  background-color: rgba(0, 0, 0, 0.1058823529);
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div .button-con button:nth-child(2) {
+  background-color: #00ab6b;
+  color: white;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .content-type summary {
+  width: fit-content;
+  display: flex;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .content-type summary span {
+  background-color: #00ab6b;
+  color: white;
+  border-radius: 5px;
+  padding: 2px 5px;
+  font-size: 14px;
+  text-align: center;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .globalClear {
+  border: none;
+  padding: 10px 15px;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.58);
+  cursor: pointer;
+  background-color: transparent;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .globalClear:hover {
+  background-color: rgba(0, 0, 0, 0.091);
+}
+.main-div .upper .upper-wrapper .filter2-web details {
+  position: relative;
+  border-radius: 100px;
+  border: 1px solid rgba(0, 0, 0, 0.258);
+  font-size: 14px;
+  transition: all 0.15s linear;
+}
+.main-div .upper .upper-wrapper .filter2-web details:hover {
+  border: 1px solid black;
+}
+.main-div .upper .upper-wrapper .filter2-web details[open] {
+  border: 1px solid black;
+}
+.main-div .upper .upper-wrapper .filter2-web details[open] summary i {
+  transform: rotate(-180deg);
+}
+.main-div .upper .upper-wrapper .filter2-web details summary {
+  font-weight: 580;
+  padding: 10px 20px;
+  text-wrap: nowrap;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  cursor: pointer;
+  gap: 3px;
+}
+.main-div .upper .upper-wrapper .filter2-web details summary::-webkit-details-marker {
+  display: none;
+}
+.main-div .upper .upper-wrapper .filter2-web details summary i {
+  font-size: 20px;
+  transition: all 0.1s linear;
+}
+.main-div .upper .upper-wrapper .filter2-web details div {
+  position: absolute;
+  background-color: white;
+  display: grid;
+  width: 200px;
+  font-weight: 450;
+  right: 0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  margin-top: 5px;
+  color: rgba(0, 0, 0, 0.543);
+}
+.main-div .upper .upper-wrapper .filter2-web details div .cat-1,
+.main-div .upper .upper-wrapper .filter2-web details div .cat-3 {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 8px;
+}
+.main-div .upper .upper-wrapper .filter2-web details div .cat-1:hover,
+.main-div .upper .upper-wrapper .filter2-web details div .cat-3:hover {
+  background-color: rgba(117, 117, 117, 0.0941176471);
+}
+.main-div .upper .upper-wrapper .filter2-web details div .cat-1.green,
+.main-div .upper .upper-wrapper .filter2-web details div .cat-3.green {
+  color: #00ab6b;
+}
+.main-div .middle {
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+.main-div .middle h2,
+.main-div .middle p {
+  cursor: context-menu;
+}
+.main-div .middle p {
+  color: rgba(0, 0, 0, 0.498);
+  font-size: 14px;
+}
+.main-div .middle .keywords {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  overflow: auto;
+  scrollbar-width: none;
+  align-items: center;
+}
+.main-div .middle .keywords .box {
+  background-color: white;
+  white-space: nowrap;
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.237);
+  text-decoration: none;
+  color: black;
+}
+.main-div .middle .keywords .box:hover {
+  border: 1px solid black;
+}
+.main-div .lower {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 20px;
+}
+.main-div .lower .lower-heading {
+  color: rgba(25, 27, 38, 0.64);
+  font-size: 14px;
+  cursor: context-menu;
+}
+.main-div .lower .main-card-con {
+  position: relative;
+  margin-top: 10px;
+  width: 100%;
+}
+.main-div .lower .main-card-con .frame .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  gap: 20px;
+}
+.main-div .lower .main-card-con .frame .container > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.main-div .lower .main-card-con .frame .container > div .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  position: relative;
+}
+.main-div .lower .main-card-con .frame .container > div .card:has(video)::after {
+  position: absolute;
+  content: "\f51d";
+  font-family: remixicon;
+  padding: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.242);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.main-div .lower .main-card-con .frame .container > div .card:hover::after {
+  content: "";
+  background-color: transparent;
+}
+.main-div .lower .main-card-con .frame .container > div .card img {
+  width: 100%;
+  object-fit: cover;
+}
+.main-div .lower .main-card-con .frame .container > div .card video {
+  width: 100%;
+  object-fit: cover;
+}
+.main-div .lower .loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+.main-div .lower.noresult {
+  height: calc(100vh - 600px);
+}
+
+@keyframes in {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes out {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 100%;
+  }
+}

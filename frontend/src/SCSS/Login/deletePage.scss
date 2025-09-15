@@ -1,0 +1,135 @@
+ .delete-container {
+        background-color: transparent;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100dvh;
+        width: 100vw;
+        display: flex;
+        padding: 10px;
+        overflow: auto;
+        z-index: 200;
+
+        .delete-account {
+            background-color: white;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            width: min(100%, 380px);
+
+            .delete-header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 30px;
+
+                i {
+                    padding: 5px;
+                    cursor: pointer;
+                    border-radius: 5px;
+
+                    &:hover {
+                        background-color: #2c2a2a31;
+                    }
+                }
+            }
+
+            .delete-message {
+                background-color: #fcf6e5;
+                padding: 15px;
+                border-radius: 10px;
+                line-height: 25px;
+                font-size: 15px;
+                margin-bottom: 30px;
+
+                p:nth-child(1) {
+                    font-weight: 650;
+
+                    i {
+                        font-size: 17px;
+                        color: #eac560;
+                    }
+                }
+
+                p:nth-child(2) {
+                    margin-left: 23px;
+                    color: #7b7979;
+                }
+            }
+
+            form {
+                .password-box {
+                    // background-color: red;
+                    color: black;
+                    font-weight: 600;
+                    margin-bottom: 30px;
+
+                    input {
+                        width: 100%;
+                        border-radius: 5px;
+                        outline: none;
+                        border: 1px solid rgba(0, 0, 0, 0.26);
+                        padding: 10px;
+                        margin: 10px 0;
+
+                        &:hover {
+                            border: 1px solid rgba(0, 0, 0, 0.952);
+                        }
+
+                        &:focus {
+                            border: 1px solid rgba(0, 0, 0, 0.952);
+                        }
+
+                        &::placeholder {
+                            color: #46444449;
+                        }
+                    }
+                }
+
+                .buttons {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: stretch;
+                    gap: 15px;
+                    // flex-wrap: wrap;
+
+                    .cancel,
+                    .delete {
+                        border: none;
+                        border-radius: 20px;
+                        cursor: pointer;
+                        font-weight: 600;
+                    }
+
+                    .cancel {
+                        background-color: transparent;
+                        color: #464444bf;
+                        padding: 10px 20px;
+                        text-wrap: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+
+                        &:hover {
+                            background-color: #f0f0f0;
+                        }
+                    }
+
+                    .delete {
+                        background-color: #e34848;
+                        color: white;
+                        width: 140px;
+                        text-wrap: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        padding: 0 20px;
+
+                        &:hover {
+                            background-color: rgba(227, 72, 72, 0.753);
+                        }
+                    }
+                }
+            }
+
+        }
+    }

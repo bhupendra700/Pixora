@@ -1,0 +1,971 @@
+.main-div {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.116);
+  padding-top: 20px;
+  padding-bottom: 100px;
+}
+.main-div .upper {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.116);
+  padding: 10px 0;
+}
+.main-div .upper .upper-wrapper {
+  display: flex;
+  padding: 0 21px;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+.main-div .upper .upper-wrapper .filter1-mob {
+  width: 100%;
+  display: flex;
+}
+.main-div .upper .upper-wrapper .filter1-mob button {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  border-radius: 100px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.553);
+  transition: all 0.05s linear;
+}
+.main-div .upper .upper-wrapper .filter1-mob button:hover {
+  background-color: rgba(208, 198, 198, 0.171);
+}
+.main-div .upper .upper-wrapper .filter1-mob button i,
+.main-div .upper .upper-wrapper .filter1-mob button span {
+  color: #02b372;
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile {
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  animation: in 0.3s ease-in;
+  z-index: 15;
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper {
+  background-color: white;
+  height: 100dvh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .header-filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.089);
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .header-filter h4 {
+  cursor: context-menu;
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .header-filter i {
+  border-radius: 50%;
+  padding: 1px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .header-filter i:hover {
+  background-color: rgba(0, 0, 0, 0.089);
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter {
+  padding: 0 20px;
+  height: 100%;
+  overflow: auto;
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter details {
+  position: relative;
+  font-weight: 580;
+  font-size: 15px;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.135);
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter details[open] summary i {
+  transform: rotate(-180deg);
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter details summary {
+  padding: 20px 0;
+  text-wrap: nowrap;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter details summary:hover i {
+  color: #00ab6b;
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter details summary::-webkit-details-marker {
+  display: none;
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter details summary i {
+  font-size: 20px;
+  transition: all 0.1s linear;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.322);
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter details div {
+  background-color: rgb(255, 255, 255);
+  display: grid;
+  margin-top: 5px;
+  width: 100%;
+  font-size: 14px;
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter details div .cat-1,
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter details div .cat-3 {
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.587);
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter details div .cat-1:hover,
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter details div .cat-3:hover {
+  background-color: rgba(117, 117, 117, 0.0941176471);
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter details div .cat-1.green,
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter details div .cat-3.green {
+  color: #00ab6b;
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter details div .cat-2 p {
+  color: rgba(0, 0, 0, 0.587);
+  padding: 10px;
+  padding-left: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 400;
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter details div .cat-2 p:hover {
+  background-color: rgba(117, 117, 117, 0.0941176471);
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter details div .cat-2 p.green {
+  color: #00ab6b;
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .orientation div span {
+  font-size: 14px;
+  font-weight: 400;
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .color .color-div > * + * {
+  margin: 20px 0;
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .color .color-div .transparent-con label,
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .color .color-div .black-white label {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .color .color-div .transparent-con label:has(input[type=checkbox]:checked),
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .color .color-div .black-white label:has(input[type=checkbox]:checked) {
+  color: #00ab6b;
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .color .color-div .transparent-con label:hover,
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .color .color-div .black-white label:hover {
+  background-color: rgba(219, 215, 215, 0.509);
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .color .color-div .transparent-con label:hover input[type=checkbox],
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .color .color-div .black-white label:hover input[type=checkbox] {
+  border: 2px solid black;
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .color .color-div .transparent-con label:hover input[type=checkbox]:after,
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .color .color-div .black-white label:hover input[type=checkbox]:after {
+  content: "\eb7b";
+  position: absolute;
+  font-family: remixicon;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .color .color-div .transparent-con label:hover input[type=checkbox]:checked:after,
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .color .color-div .black-white label:hover input[type=checkbox]:checked:after {
+  color: white;
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .color .color-div .transparent-con label input[type=checkbox],
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .color .color-div .black-white label input[type=checkbox] {
+  appearance: none;
+  position: relative;
+  padding: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.174);
+  border-radius: 3px;
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .color .color-div .transparent-con label input[type=checkbox]:checked,
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .color .color-div .black-white label input[type=checkbox]:checked {
+  background-color: #00ab6b;
+  border: 2px solid #00ab6b;
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .color .color-div .transparent-con label input[type=checkbox]:checked:after,
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .color .color-div .black-white label input[type=checkbox]:checked:after {
+  content: "\eb7b";
+  position: absolute;
+  font-family: remixicon;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .color .color-div .color-con {
+  padding: 10px 0;
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .color .color-div .color-con input[type=checkbox] {
+  position: relative;
+  appearance: none;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.068);
+  cursor: pointer;
+  padding: 25px;
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .color .color-div .color-con input[type=checkbox]:hover:after {
+  position: absolute;
+  content: "\ea13";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -4px;
+  right: -4px;
+  padding: 4px;
+  font-family: remixicon;
+  background-color: rgb(230, 230, 230);
+  border-radius: 50%;
+  border: 2px solid white;
+  font-size: 11px;
+  font-weight: 550;
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .color .color-div .color-con input[type=checkbox]:checked:after {
+  position: absolute;
+  content: "\eb7b";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -4px;
+  right: -4px;
+  padding: 4px;
+  font-family: remixicon;
+  background-color: #00ab6b;
+  color: white;
+  border-radius: 50%;
+  border: 2px solid white;
+  font-size: 11px;
+  font-weight: 550;
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .color .color-div .color-con input[type=checkbox]:checked:hover:after {
+  content: "\eb99";
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .color .color-div .button-con {
+  display: flex;
+  gap: 10px;
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .color .color-div .button-con button:hover {
+  background-color: rgba(0, 0, 0, 0.066);
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .color .color-div .button-con button:nth-child(2) {
+  background-color: #00ab6b;
+  color: white;
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .color .color-div .button-con button:nth-child(2):hover {
+  background-color: rgba(0, 171, 108, 0.768627451);
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .size form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .size form div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.584);
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .size form div:nth-child(2) input {
+  width: 100%;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.174);
+  outline: none;
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .size form div:nth-child(2) input::placeholder {
+  color: rgba(0, 0, 0, 0.187);
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .size form div:nth-child(2) input:hover {
+  border: 1px solid black;
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .size form div:nth-child(2) input:focus {
+  border: 1px solid black;
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .size form div:nth-child(3) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding-bottom: 18px;
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .size form div:nth-child(3) button {
+  width: 100%;
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .size form div:nth-child(3) button:nth-child(2) {
+  background-color: #01be79;
+  color: white;
+  font-weight: 650;
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .size form div:nth-child(3) button:nth-child(2):hover {
+  background-color: #03cb82;
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .content-type summary {
+  align-items: flex-end;
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .content-type summary div {
+  width: fit-content;
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .content-type summary div:nth-child(2) {
+  width: 100%;
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .content-type summary div:nth-child(2) span {
+  background-color: #00ab6b;
+  border-radius: 5px;
+  color: white;
+  padding: 0px 5px;
+  margin: 0 10px;
+  cursor: pointer;
+  width: fit-content;
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .globalClear {
+  margin: 20px 0;
+  transition: all 0.01s linear;
+}
+.main-div .upper .upper-wrapper .filter1-mob .mobile .filter1-wrapper .body-filter .globalClear:hover {
+  background-color: rgba(0, 0, 0, 0.075);
+}
+.main-div .upper .upper-wrapper .filter1-mob .go {
+  animation: out 0.3s ease-in;
+}
+.main-div .upper .upper-wrapper .filter2-mob {
+  width: 100%;
+}
+.main-div .upper .upper-wrapper .filter2-mob details {
+  position: relative;
+  border-radius: 100px;
+  border: 1px solid rgba(0, 0, 0, 0.258);
+  font-size: 14px;
+  transition: all 0.15s linear;
+}
+.main-div .upper .upper-wrapper .filter2-mob details:hover {
+  border: 1px solid black;
+}
+.main-div .upper .upper-wrapper .filter2-mob details[open] {
+  border: 1px solid black;
+}
+.main-div .upper .upper-wrapper .filter2-mob details[open] summary i {
+  transform: rotate(-180deg);
+}
+.main-div .upper .upper-wrapper .filter2-mob details summary {
+  font-weight: 580;
+  padding: 10px 20px;
+  text-wrap: nowrap;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  cursor: pointer;
+  gap: 3px;
+}
+.main-div .upper .upper-wrapper .filter2-mob details summary::-webkit-details-marker {
+  display: none;
+}
+.main-div .upper .upper-wrapper .filter2-mob details summary i {
+  font-size: 20px;
+  transition: all 0.1s linear;
+}
+.main-div .upper .upper-wrapper .filter2-mob details div {
+  position: absolute;
+  background-color: white;
+  display: grid;
+  width: 100%;
+  font-weight: 450;
+  right: 0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  margin-top: 5px;
+  color: rgba(0, 0, 0, 0.543);
+}
+.main-div .upper .upper-wrapper .filter2-mob details div .cat-1,
+.main-div .upper .upper-wrapper .filter2-mob details div .cat-3 {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 8px;
+}
+.main-div .upper .upper-wrapper .filter2-mob details div .cat-1:hover,
+.main-div .upper .upper-wrapper .filter2-mob details div .cat-3:hover {
+  background-color: rgba(117, 117, 117, 0.0941176471);
+}
+.main-div .upper .upper-wrapper .filter2-mob details div .cat-1.green,
+.main-div .upper .upper-wrapper .filter2-mob details div .cat-3.green {
+  color: #00ab6b;
+}
+.main-div .upper .upper-wrapper:has(.filter1-web) {
+  gap: 20px;
+}
+.main-div .upper .upper-wrapper .filter1-web {
+  width: 100%;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter {
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter details:is(.catagory, .orientation, .size, .published-date, .content-type) {
+  position: relative;
+  font-size: 15px;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter details:is(.catagory, .orientation, .size, .published-date, .content-type)[open] summary {
+  color: black;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter details:is(.catagory, .orientation, .size, .published-date, .content-type)[open] summary i {
+  transform: rotate(-180deg);
+  color: #00ab6b;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter details:is(.catagory, .orientation, .size, .published-date, .content-type) summary {
+  padding: 10px 15px;
+  border-radius: 500px;
+  font-weight: 580;
+  text-wrap: nowrap;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  cursor: pointer;
+  gap: 5px;
+  color: rgba(0, 0, 0, 0.589);
+  transition: all 0.15s linear;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter details:is(.catagory, .orientation, .size, .published-date, .content-type) summary:hover {
+  background-color: rgba(145, 145, 140, 0.105);
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter details:is(.catagory, .orientation, .size, .published-date, .content-type) summary::-webkit-details-marker {
+  display: none;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter details:is(.catagory, .orientation, .size, .published-date, .content-type) summary i {
+  font-size: 20px;
+  transition: all 0.1s linear;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.322);
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter details:is(.catagory, .orientation, .size, .published-date, .content-type) div {
+  position: absolute;
+  background-color: white;
+  display: grid;
+  font-weight: 350;
+  width: 200px;
+  left: 0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  margin-top: 5px;
+  color: rgba(0, 0, 0, 0.607);
+  z-index: 5;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter details:is(.catagory, .orientation, .size, .published-date, .content-type) div .cat-1,
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter details:is(.catagory, .orientation, .size, .published-date, .content-type) div .cat-3 {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 8px;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter details:is(.catagory, .orientation, .size, .published-date, .content-type) div .cat-1:hover,
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter details:is(.catagory, .orientation, .size, .published-date, .content-type) div .cat-3:hover {
+  background-color: rgba(117, 117, 117, 0.0941176471);
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter details:is(.catagory, .orientation, .size, .published-date, .content-type) div .cat-2 p {
+  padding: 10px;
+  padding-left: 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter details:is(.catagory, .orientation, .size, .published-date, .content-type) div .cat-2 p:hover {
+  background-color: rgba(117, 117, 117, 0.0941176471);
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter details:is(.catagory, .orientation, .size, .published-date, .content-type) div .green {
+  color: #00ab6b;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .size form div {
+  display: block;
+  z-index: 0;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .size form div:nth-child(1) {
+  display: block;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .size div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 350px !important;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .size div section:nth-child(1) {
+  font-weight: 600;
+  color: black;
+  cursor: context-menu;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .size div section:nth-child(2) {
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.525);
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .size div section:nth-child(2) input {
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.242);
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .size div section:nth-child(2) input:hover, .main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .size div section:nth-child(2) input:focus {
+  border: 1px solid black;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .size div section:nth-child(3) {
+  display: flex;
+  justify-content: space-between;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .size div section:nth-child(3) button {
+  border: none;
+  border-radius: 50px;
+  padding: 6px 12px;
+  color: rgba(0, 0, 0, 0.557);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  background-color: transparent;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .size div section:nth-child(3) button:hover {
+  background-color: rgba(0, 0, 0, 0.078);
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .size div section:nth-child(3) button:nth-child(2) {
+  background-color: #00ab6b;
+  color: white;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color {
+  position: relative;
+  font-size: 15px;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color[open] summary {
+  color: black;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color[open] summary i {
+  transform: rotate(-180deg);
+  color: #00ab6b;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color summary {
+  padding: 10px 15px;
+  border-radius: 500px;
+  font-weight: 580;
+  text-wrap: nowrap;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  cursor: pointer;
+  gap: 5px;
+  color: rgba(0, 0, 0, 0.589);
+  transition: all 0.15s linear;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color summary:hover {
+  background-color: rgba(145, 145, 140, 0.105);
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color summary::-webkit-details-marker {
+  display: none;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color summary i {
+  font-size: 20px;
+  transition: all 0.1s linear;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.322);
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div {
+  position: absolute;
+  background-color: white;
+  font-weight: 350;
+  left: 0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  margin-top: 5px;
+  color: rgba(0, 0, 0, 0.607);
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div .transparent-con label,
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div .black-white label {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2px;
+  padding: 8px 10px;
+  color: rgba(0, 0, 0, 0.635);
+  border-radius: 8px;
+  cursor: pointer;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div .transparent-con label:has(input[type=checkbox]:checked),
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div .black-white label:has(input[type=checkbox]:checked) {
+  color: #00ab6b;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div .transparent-con label:hover,
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div .black-white label:hover {
+  background-color: rgba(219, 215, 215, 0.509);
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div .transparent-con label:hover input[type=checkbox],
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div .black-white label:hover input[type=checkbox] {
+  border: 2px solid black;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div .transparent-con label:hover input[type=checkbox]:after,
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div .black-white label:hover input[type=checkbox]:after {
+  content: "\eb7b";
+  position: absolute;
+  font-family: remixicon;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div .transparent-con label:hover input[type=checkbox]:checked:after,
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div .black-white label:hover input[type=checkbox]:checked:after {
+  color: white;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div .transparent-con label input[type=checkbox],
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div .black-white label input[type=checkbox] {
+  appearance: none;
+  position: relative;
+  border: 2px solid rgba(0, 0, 0, 0.082);
+  padding: 10px;
+  border-radius: 3px;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div .transparent-con label input[type=checkbox]:checked,
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div .black-white label input[type=checkbox]:checked {
+  border: 2px solid #00ab6b;
+  background-color: #00ab6b;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div .transparent-con label input[type=checkbox]:checked::before,
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div .black-white label input[type=checkbox]:checked::before {
+  content: "\eb7b";
+  font-family: remixicon;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div .color-con {
+  padding: 10px 0;
+  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(6, 40px);
+  gap: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div .color-con input[type=checkbox] {
+  aspect-ratio: 1/1;
+  position: relative;
+  appearance: none;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.068);
+  cursor: pointer;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div .color-con input[type=checkbox]:hover:after {
+  position: absolute;
+  content: "\ea13";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -4px;
+  right: -4px;
+  padding: 4px;
+  font-family: remixicon;
+  background-color: rgb(230, 230, 230);
+  border-radius: 50%;
+  border: 2px solid white;
+  font-size: 11px;
+  font-weight: 550;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div .color-con input[type=checkbox]:checked:after {
+  position: absolute;
+  content: "\eb7b";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -4px;
+  right: -4px;
+  padding: 4px;
+  font-family: remixicon;
+  background-color: #00ab6b;
+  color: white;
+  border-radius: 50%;
+  border: 2px solid white;
+  font-size: 11px;
+  font-weight: 550;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div .color-con input[type=checkbox]:checked:hover:after {
+  content: "\eb99";
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div .button-con {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div .button-con button {
+  border: none;
+  background-color: transparent;
+  padding: 10px 20px;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.639);
+  cursor: pointer;
+  transition: all 0.15s linear;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div .button-con button:hover {
+  background-color: rgba(0, 0, 0, 0.1058823529);
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .color .color-div .button-con button:nth-child(2) {
+  background-color: #00ab6b;
+  color: white;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .content-type summary {
+  width: fit-content;
+  display: flex;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .content-type summary span {
+  background-color: #00ab6b;
+  color: white;
+  border-radius: 5px;
+  padding: 2px 5px;
+  font-size: 14px;
+  text-align: center;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .globalClear {
+  border: none;
+  padding: 10px 15px;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.58);
+  cursor: pointer;
+  background-color: transparent;
+}
+.main-div .upper .upper-wrapper .filter1-web .web .filter1-wrapper .body-filter .globalClear:hover {
+  background-color: rgba(0, 0, 0, 0.091);
+}
+.main-div .upper .upper-wrapper .filter2-web details {
+  position: relative;
+  border-radius: 100px;
+  border: 1px solid rgba(0, 0, 0, 0.258);
+  font-size: 14px;
+  transition: all 0.15s linear;
+}
+.main-div .upper .upper-wrapper .filter2-web details:hover {
+  border: 1px solid black;
+}
+.main-div .upper .upper-wrapper .filter2-web details[open] {
+  border: 1px solid black;
+}
+.main-div .upper .upper-wrapper .filter2-web details[open] summary i {
+  transform: rotate(-180deg);
+}
+.main-div .upper .upper-wrapper .filter2-web details summary {
+  font-weight: 580;
+  padding: 10px 20px;
+  text-wrap: nowrap;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  cursor: pointer;
+  gap: 3px;
+}
+.main-div .upper .upper-wrapper .filter2-web details summary::-webkit-details-marker {
+  display: none;
+}
+.main-div .upper .upper-wrapper .filter2-web details summary i {
+  font-size: 20px;
+  transition: all 0.1s linear;
+}
+.main-div .upper .upper-wrapper .filter2-web details div {
+  position: absolute;
+  background-color: white;
+  display: grid;
+  width: 200px;
+  font-weight: 450;
+  right: 0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  margin-top: 5px;
+  color: rgba(0, 0, 0, 0.543);
+}
+.main-div .upper .upper-wrapper .filter2-web details div .cat-1,
+.main-div .upper .upper-wrapper .filter2-web details div .cat-3 {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 8px;
+}
+.main-div .upper .upper-wrapper .filter2-web details div .cat-1:hover,
+.main-div .upper .upper-wrapper .filter2-web details div .cat-3:hover {
+  background-color: rgba(117, 117, 117, 0.0941176471);
+}
+.main-div .upper .upper-wrapper .filter2-web details div .cat-1.green,
+.main-div .upper .upper-wrapper .filter2-web details div .cat-3.green {
+  color: #00ab6b;
+}
+.main-div .middle {
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+.main-div .middle h2,
+.main-div .middle p {
+  cursor: context-menu;
+}
+.main-div .middle p {
+  color: rgba(0, 0, 0, 0.498);
+  font-size: 14px;
+}
+.main-div .middle .keywords {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  overflow: auto;
+  scrollbar-width: none;
+  align-items: center;
+}
+.main-div .middle .keywords .box {
+  background-color: white;
+  white-space: nowrap;
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.237);
+  text-decoration: none;
+  color: black;
+}
+.main-div .middle .keywords .box:hover {
+  border: 1px solid black;
+}
+.main-div .lower {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 20px;
+}
+.main-div .lower .lower-heading {
+  color: rgba(25, 27, 38, 0.64);
+  font-size: 14px;
+  cursor: context-menu;
+}
+.main-div .lower .main-card-con {
+  position: relative;
+  margin-top: 10px;
+  width: 100%;
+}
+.main-div .lower .main-card-con .frame .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  gap: 20px;
+}
+.main-div .lower .main-card-con .frame .container > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.main-div .lower .main-card-con .frame .container > div .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  position: relative;
+}
+.main-div .lower .main-card-con .frame .container > div .card:has(video)::after {
+  position: absolute;
+  content: "\f51d";
+  font-family: remixicon;
+  padding: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.242);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.main-div .lower .main-card-con .frame .container > div .card:hover::after {
+  content: "";
+  background-color: transparent;
+}
+.main-div .lower .main-card-con .frame .container > div .card img {
+  width: 100%;
+  object-fit: cover;
+}
+.main-div .lower .main-card-con .frame .container > div .card video {
+  width: 100%;
+  object-fit: cover;
+}
+.main-div .lower .loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+.main-div .lower.noresult {
+  height: calc(100vh - 600px);
+}
+
+@keyframes in {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes out {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 100%;
+  }
+}
