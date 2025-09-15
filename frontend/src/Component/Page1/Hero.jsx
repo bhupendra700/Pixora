@@ -320,6 +320,7 @@ const Hero = ({ setSafeSearch, safeSearch }) => {
                                 {size > 750 && <div className='profile'>
                                     <div className='name'>{user.displayName ? user.displayName : "UnKnown"}</div>
                                     <div className='box'>{user.email}</div>
+                                    <div className='box' onClick={()=>{navigate('/collection')}}>My Collection</div>
                                     <div onClick={() => { setProfile(!profile); setHemSlider({ ...hemSlider, track: "user", open: hemSlider.track === "user" ? !hemSlider.open : true }) }} className='box'>Edit Profile</div>
                                     <div className='safesearch'>
                                         <label htmlFor="switchbtn" className='switchlabel'>
@@ -402,6 +403,7 @@ const Hero = ({ setSafeSearch, safeSearch }) => {
                     <div className="hem-menu-slider">
                         {hemSlider.track === "user" ? <div className="hem-menu-main-user">
                             {user && <div className="hem-menu-email">{user.email}</div>}
+                            <div className="hem-menu-main-editprofile" onClick={()=>{navigate('/collection')}}>My Collection</div>
                             <div className="hem-menu-main-editprofile" onClick={() => {
                                 setProfile(true)
                                 document.getElementsByClassName("hem-menu-container")[0].classList.add("go");

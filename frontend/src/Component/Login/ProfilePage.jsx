@@ -8,7 +8,7 @@ import axios from 'axios';
 
 const ProfilePage = ({ profile, setProfile, user, setUser, setShowDelete }) => {
 
-    const { notify } = useContext(GlobalContext)
+    const { notify, backendURL } = useContext(GlobalContext)
     const [uploading, setUploading] = useState(false);
 
     const [inputFile, setInputFile] = useState(null)
@@ -72,7 +72,7 @@ const ProfilePage = ({ profile, setProfile, user, setUser, setShowDelete }) => {
                 formData.append("sendfile", inputFile);
                 formData.append("photoURL", user?.photoURL || "");
 
-                const res = await axios.post("https://pixaclone.onrender.com/upload", formData);
+                const res = await axios.post(`${backendURL}/upload`, formData);
 
                 await updateProfile(auth.currentUser, {
                     photoURL: JSON.stringify({ userLink: res.data.url, public_id: res.data.public_id })
@@ -82,7 +82,7 @@ const ProfilePage = ({ profile, setProfile, user, setUser, setShowDelete }) => {
                     const data = {
                         publicId: JSON.parse(user?.photoURL).public_id
                     }
-                    await axios.put("https://pixaclone.onrender.com/delete", data)
+                    await axios.put(`${backendURL}/delete`, data)
                 }
 
                 await updateProfile(auth.currentUser, {
@@ -135,7 +135,7 @@ const ProfilePage = ({ profile, setProfile, user, setUser, setShowDelete }) => {
         <div className='editprofile'>
             <div className="headerprofile">
                 <h4>Profile Picture</h4>
-                <i className="ri-close-line" onClick={() => { if (!uploading) { setProfile(!profile); setInputFile(null); setLink(JSON.parse(user?.photoURL).userLink) ; document.body.removeAttribute("class")} }}></i>
+                <i className="ri-close-line" onClick={() => { if (!uploading) { setProfile(!profile); setInputFile(null); setLink(JSON.parse(user?.photoURL).userLink); document.body.removeAttribute("class") } }}></i>
             </div>
             <div className="profileimage">
                 {link && <img src={link} alt={"user-img"} />}

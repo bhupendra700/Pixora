@@ -18,6 +18,8 @@ import axios from 'axios';
 const GlobalContext = createContext();
 const App = () => {
 
+  const backendURL = 'http://localhost:8000'
+
   //notification
   const notify = (message, method) => {
     toast[method](message, {
@@ -59,33 +61,12 @@ const App = () => {
     return () => unSubscribe();
   }, [])
 
-  const [collection, setCollection] = useState([])
-
-  useEffect(() => {
-    const fetchCollection = async () => {
-      try {
-        const { docs } = await axios.get(`/getcollection/${user.uid}`);
-        setCollection(docs?.collection || []);
-      } catch (error) {
-        console.log(error.message);
-        setCollection([]);
-      }
-    }
-
-    if (user) {
-      fetchCollection()
-    } else {
-      setCollection([]);
-    }
-
-  }, [user])
-
-  return <GlobalContext.Provider value={{ notify, collection, setCollection, user }}>
+  return <GlobalContext.Provider value={{ notify, user, backendURL }}>
     <ToastContainer />
     <CleanSlash>
       <Routes>
         <Route path='/' element={<Page1Wrapper />} />
-        <Route path='/collection' element={user ? <Collection /> : <Error />} />
+        {user && <Route path='/collection' element={<Collection />} />}
         <Route path='/:cat' element={<Page1Wrapper />} />
         <Route path='/:cat/search/' element={
           (() => {

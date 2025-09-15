@@ -9,7 +9,7 @@ import { GlobalContext } from '../../App';
 
 const DeletePage = ({ setShowDelete, user }) => {
 
-    const { notify } = useContext(GlobalContext)
+    const { notify, backendURL } = useContext(GlobalContext)
     const [deleting, setDeleting] = useState(false)
     const [password, setPassword] = useState("")
 
@@ -19,24 +19,24 @@ const DeletePage = ({ setShowDelete, user }) => {
             const loginUser = auth.currentUser
             setDeleting(true)
 
-            if (password) {
+             if (password) {
                 const credential = EmailAuthProvider.credential(loginUser.email, password);
                 await reauthenticateWithCredential(loginUser, credential)
             } else {
                 await reauthenticateWithPopup(loginUser, new GoogleAuthProvider())
             }
 
-            await deleteUser(loginUser)
-
             if (JSON.parse(loginUser?.photoURL || "{}").public_id) {
                 const data = {
                     publicId: JSON.parse(loginUser?.photoURL).public_id
                 }
-                await axios.put("https://pixaclone.onrender.com/delete", data)
+                await axios.put(`${backendURL}/delete`, data)
             }
 
-            await axios.delete(`/getcollection/${loginUser.uid}`);
-            
+            await axios.delete(`${backendURL}/deleteFolder/${loginUser.uid}`);
+
+            await deleteUser(loginUser)
+
             document.body.removeAttribute("class");
             setShowDelete(false)
             setDeleting(false)

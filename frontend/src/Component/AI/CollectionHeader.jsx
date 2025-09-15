@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import { NavLink, Link, useParams, useNavigate, useSearchParams, useLocation } from 'react-router-dom';
+import { NavLink, Link, useNavigate, useSearchParams } from 'react-router-dom';
 import '../../CSS/Page2/header.css'
 import useWindowSize from '../useWindowSize';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
@@ -130,9 +130,9 @@ const CollectionHeader = ({ safeSearch, setSafeSearch }) => {
 
         query = query.slice(0, -1);
 
-        if(method === "full"){
+        if (method === "full") {
             navigate(`/${topCat}/search/${searchQuery.toLowerCase()}/${query ? `?${query}` : ""}`)
-        }else{
+        } else {
             navigate(`/${topCat}/search/${query ? `?${query}` : ""}`)
         }
     }
@@ -160,15 +160,15 @@ const CollectionHeader = ({ safeSearch, setSafeSearch }) => {
                     <i className="search-icon ri-search-line" onClick={() => {
                         if (searchQuery !== "") {
                             filterSearchParam("full")
-                        }else{
+                        } else {
                             filterSearchParam("empty")
                         }
                     }}></i>
                     <input type="search" placeholder='Search Pixabay' value={searchQuery} onChange={(e) => { setSearchQuery(e.target.value) }} onKeyDown={(e) => {
                         if (e.key === "Enter") {
-                            if(searchQuery !== ""){
+                            if (searchQuery !== "") {
                                 filterSearchParam("full")
-                            }else{
+                            } else {
                                 filterSearchParam("empty")
                             }
                         }
@@ -209,6 +209,7 @@ const CollectionHeader = ({ safeSearch, setSafeSearch }) => {
                                 {size > 750 && <div className='profile'>
                                     <div className='name'>{user.displayName ? user.displayName : "UnKnown"}</div>
                                     <div className='box'>{user.email}</div>
+                                    <div onClick={() => { navigate('/collection') }} className='box'>My Collection</div>
                                     <div onClick={() => { setProfile(!profile); setHemSlider({ ...hemSlider, track: "user", open: hemSlider.track === "user" ? !hemSlider.open : true }) }} className='box'>Edit Profile</div>
                                     <div className='safesearch'>
                                         <label htmlFor="switchbtn" className='switchlabel'>
@@ -264,7 +265,7 @@ const CollectionHeader = ({ safeSearch, setSafeSearch }) => {
                 <div className={hemSlider.track === "user" ? "hem-menu login" : hemSlider.track === "hem" ? "hem-menu hem" : "hem-menu"}>
                     <div className="hem-menu-header">
                         {hemSlider.track === "hem" && <div className="logo">
-                            pc
+                            px
                         </div>}
                         {hemSlider.track === "user" && <div className="accaunt-logo">
                             <div className='account-img'>
@@ -289,6 +290,7 @@ const CollectionHeader = ({ safeSearch, setSafeSearch }) => {
                     <div className="hem-menu-slider">
                         {hemSlider.track === "user" ? <div className="hem-menu-main-user">
                             {user && <div className="hem-menu-email">{user.email}</div>}
+                            <div className="hem-menu-main-editprofile" onClick={() => { navigate('/collection') }}>My Collection</div>
                             <div className="hem-menu-main-editprofile" onClick={() => {
                                 setProfile(true)
                                 document.getElementsByClassName("hem-menu-container")[0].classList.add("go");

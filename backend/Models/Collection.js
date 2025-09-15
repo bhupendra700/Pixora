@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const collectionShcema = new mongoose.Schema({
     public_id : {
@@ -30,6 +30,6 @@ const userSchema = new mongoose.Schema({
     }
 })
 
-const Collection = mongoose.model.Collection || mongoose.model("Collection" , userSchema);
+const Collection = mongoose.models.Collection || mongoose.model("Collection" , userSchema);
 
-export default Collection
+module.exports = Collection

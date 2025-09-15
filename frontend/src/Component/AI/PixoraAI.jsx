@@ -1,71 +1,42 @@
 import '../../CSS/AI/ai.css'
 import logo from '../../Images/logo.png'
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import { CircularProgress } from '@mui/material';
 import axios from 'axios';
 import { customAlphabet } from 'nanoid';
+import { GlobalContext } from '../../App';
 
-const PixoraAI = ({setAi}) => {
+const PixoraAI = ({ setAi }) => {
+
+  const { backendURL, user , notify } = useContext(GlobalContext);
+
   const alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
   const nanoid = customAlphabet(alphabet, 20);
 
   const [prompt, setPrompt] = useState("");
-  
-  const [data , setData] = useState([])
 
-//    const [data, setData] = useState([
-//     { image: "", prompt: "hello world" },
-//     "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAyklEQVR4AeyVMQ6EMBADI/7/59C7sSwq7Dnpiihb4PEsPPecu/x/zvgPAOMCHAzAgHECrMC4ALwEWQFWYJwAKzAuwN5XQAtnBZTI2hkD1hrXvBigRNbOGLDWuObFACWydsaAtcY1LwYokbUzBrQ37vJhgCPUfo8B7Q27fBjgCLXfY0B7wy4fBjhC7fcY0N6wy4cBjlD7PQa0NZzmwYCUWNs8BrQ1mubBgJRY2zwGtDWa5sGAlFjbPAa0NZrmwYCUWNs8Bvy90a/P/wIAAP//it54IAAAAAZJREFUAwBODoABi7PBtwAAAABJRU5ErkJggg==",
-
-//     { image: "https://picsum.photos/id/237/200/300", prompt: "random text 1" },
-//     "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAyElEQVR4AeyVMQ6EMBADo/z/z9C7sSwq7LmromyBx7Nwz7P9v2f8B4BxAQ4GYMA4AVZgXABegqwAKzBOgBUYF2DvK6CFswJKZO2MAWuNa14MUCJrZwxYa1zzYoASWTtjwFrjmhcDlMjaGQPaG3f5MMARar/HgPaGXT4McITa7zGgvWGXDwMcofZ7DGhv2OXDAEeo/R4D2hpO82BASqxtHgPaGk3zYEBKrG0eA9oaTfNgQEqsbR4D2hpN82BASqxtHgP+3ujX538BAAD//yuD06QAAAAGSURBVAMADk6AAWA9FEoAAAAASUVORK5CYII=",
-
-//     { image: "", prompt: "sample prompt" },
-//     "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAA0ElEQVR4AeySMQ7EMAzDgv7/z6lnL4LQqRIPucGwh4ric869zf8BcKp/AKiuf8JjwECofhhQXf+Ex4CBUP0woLr+CY8BA6H6YUBb/TsvBmwibTMGtDW+82LAJtI2Y0Bb4zsvBmwibTMGtDW+82LAJtI2Y0B64yofBihC6XsMSG9Y5cMARSh9jwHpDat8GKAIpe8xIL1hlQ8DFKH0PQakNezmwQCXWNo9BqQ16ubBAJdY2j0GpDXq5sEAl1jaPQakNermwQCXWNo9Bvy90a/f/wIAAP//5RYYxgAAAAZJREFUAwDOf4ABM9l16wAAAABJRU5ErkJggg==",
-
-//     { image: "https://placehold.co/250x250.png?text=Test+Image", prompt: "test message" },
-//     "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAyklEQVR4AeyVMQ6EMBADI/7/59C7sSwq7Dnpiihb4PEsPPeeu/x/zvgPAOMCHAzAgHECrMC4ALwEWQFWYJwAKzAuwN5XQAtnBZTI2hkD1hrXvBigRNbOGLDWuObFACWydsaAtcY1LwYokbUzBrQ37vJhgCPUfo8B7Q27fBjgCLXfY0B7wy4fBjhC7fcY0N6wy4cBjlD7PQa0NZzmwYCUWNs8BrQ1mubBgJRY2zwGtDWa5sGAlFjbPAa0NZrmwYCUWNs8Bvy90a/P/wIAAP//sJvXOQAAAAZJREFUAwBMPb/BxC26eQAAAABJRU5ErkJggg==",
-
-//     { image: "https://picsum.photos/seed/hello/300/300", prompt: "lorem ipsum" },
-//     "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAyklEQVR4AeyVMQ6EMBADI/7/59C7sSwq7Dnpiihb4PEsPOfeu/x/zvgPAOMCHAzAgHECrMC4ALwEWQFWYJwAKzAuwN5XQAtnBZTI2hkD1hrXvBigRNbOGLDWuObFACWydsaAtcY1LwYokbUzBrQ37vJhgCPUfo8B7Q27fBjgCLXfY0B7wy4fBjhC7fcY0N6wy4cBjlD7PQa0NZzmwYCUWNs8BrQ1mubBgJRY2zwGtDWa5sGAlFjbPAa0NZrmwYCUWNs8Bvy90a/P/wIAAP//AYdK5wAAAAZJREFUAwDMrr/B1iEK6wAAAABJRU5ErkJggg==",
-
-//     { image: "", prompt: "another example" },
-//     "error",
-
-//     { image: "https://placehold.co/600x400?text=Final+Check", prompt: "final check" },
-//     "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAyklEQVR4AeyVMQ6EMBADI/7/59C7sSwq7Dnpiihb4PEsPPfcu/x/zvgPAOMCHAzAgHECrMC4ALwEWQFWYJwAKzAuwN5XQAtnBZTI2hkD1hrXvBigRNbOGLDWuObFACWydsaAtcY1LwYokbUzBrQ37vJhgCPUfo8B7Q27fBjgCLXfY0B7wy4fBjhC7fcY0N6wy4cBjlD7PQa0NZzmwYCUWNs8BrQ1mubBgJRY2zwGtDWa5sGAlFjbPAa0NZrmwYCUWNs8Bvy90a/P/wIAAP//r6+CBAAAAAZJREFUAwAMfb/BL6NvhAAAAABJRU5ErkJggg==",
-
-//     { image: "", prompt: "empty case 1" },
-//     "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAzElEQVR4AeyVsQ2EQBADT/TfBnVC7sSyiLDnpQ9OtwEez8L13OdZ/l9n/AeAcQEOBmDAOAFWYFwAXoKsACswToAVGBdg7yughbMCSmTtjAFrjWteDFAia2cMWGtc82KAElk7Y8Ba45oXA5TI2hkD2ht3+TDAEWq/x4D2hl0+DHCE2u8xoL1hlw8DHKH2ewxob9jlwwBHqP0eA9oaTvNgQEqsbR4D2hpN82BASqxtHgPaGk3zYEBKrG0eA9oaTfNgQEqsbR4D/t7o1+d/AQAA//9/LF1jAAAABklEQVQDAJgoqUGG1sPbAAAAAElFTkSuQmCC",
-
-//     { image: "https://picsum.photos/id/100/200/200", prompt: "dataset expansion" },
-//     "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAy0lEQVR4AeyVMQ6EMBADI17Oz6F3Y1lU2HPSFVG2wONZuO5zP8v/64z/ADAuwMEADBgnwAqMC8BLkBVgBcYJsALjAux9BbRwVkCJrJ0xYK1xzYsBSmTtjAFrjWteDFAia2cMWGtc82KAElk7Y0B74y4fBjhC7fcY0N6wy4cBjlD7PQa0N+zyYYAj1H6PAe0Nu3wY4Ai132NAW8NpHgxIibXNY0Bbo2keDEiJtc1jQFujaR4MSIm1zWNAW6NpHgxIibXNY8DfG/36/C8AAAD//zGes5oAAAAGSURBVAMA/y+AQWEuhQ8AAAAASUVORK5CYII=",
-
-//     { image: "https://picsum.photos/seed/mix/300/150", prompt: "alternate mix" },
-//     "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAzElEQVR4AeyVsQ2EQBADEeXQN3VC7sSyiLDnpQ9OtwEez8J5X9ez/D+P8R8AxgU4MAADxgmwAuMC8BJkBViBcQKswLgAe18BLZwVUCJrZwxYa1zzYoASWTtjwFrjmhcDlMjaGQPWGte8GKBE1s4Y0N64y4cBjlD7PQa0N+zyYYAj1H6PAe0Nu3wY4Ai132NAe8MuHwY4Qu33GNDWcJoHA1JibfMY0NZomgcDUmJt8xjQ1miaBwNSYm3zGNDWaJoHA1JibfMY8PdGvz7/CwAA//9S23UXAAAABklEQVQDAIdufoGvpuQIAAAAAElFTkSuQmCC",
-
-//     { image: "", prompt: "edge test" },
-//     "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAzUlEQVR4AeyVsQ2EQBADEf0XRU5RkDuxLCLseemD022Ax7NwPtf9LP/PY/wHgHEBDgzAgHECrMC4ALwEWQFWYJwAKzAuwN5XQAtnBZTI2hkD1hrXvBigRNbOGLDWuObFACWydsaAtcY1LwYokbUzBrQ37vJhgCPUfo8B7Q27fBjgCLXfY0B7wy4fBjhC7fcY0N6wy4cBjlD7PQa0NZzmwYCUWNs8BrQ1mubBgJRY2zwGtDWa5sGAlFjbPAa0NZrmwYCUWNs8Bvy90a/P/wIAAP//msHr+wAAAAZJREFUAwDcNuLBei2XJQAAAABJRU5ErkJggg==",
-
-//     { image: "https://picsum.photos/seed/check/320/240", prompt: "prompt check" },
-//     "https://placehold.co/380x220/00ff00/000000.png?text=Prompt+Check",
-
-//     { image: "", prompt: "hello dataset" },
-//     "https://picsum.photos/seed/hello2/360/240",
-
-//     { image: "https://placehold.co/500x300?text=Random+Test+Data", prompt: "random test data" },
-//     "https://picsum.photos/seed/random/200/400"
-//   ]
-//   );
-
+  const [data, setData] = useState([])
 
   const [loader, setLoader] = useState(false)
 
-  useEffect(()=>{
+  useEffect(() => {
     document.body.style.overflow = "hidden"
 
-    return ()=> document.body.style.overflow = "auto"
-  },[])
+    return () => document.body.style.overflow = "auto"
+  }, [])
+
+
+  const refMain = useRef(null);
+
+  const scrollTop = () => {
+    if (refMain.current) {
+      refMain.current.scrollTo({
+        top: refMain.current.scrollHeight + 87,
+        behavior: "smooth"  // <-- correct spelling
+      });
+    }
+  };
+
 
   const generateImg = async () => {
     try {
@@ -74,18 +45,19 @@ const PixoraAI = ({setAi}) => {
       setLoader(true)
       setPrompt("")
       setImg(null)
+      scrollTop();
 
       let res = ""
       if (obj.prompt && obj.image) { //image + prompt -> background change
-        res = await axios.post("http://localhost:8000/changebackground", { prompt: obj.prompt, image: obj.image.replace(/^data:image\/\w+;base64,/, "") })
+        res = await axios.post(`${backendURL}/changebackground`, { prompt: obj.prompt, image: obj.image.replace(/^data:image\/\w+;base64,/, "") })
       } else if (obj.prompt && !obj.image) { //only promt -> text to image
-        res = await axios.post('http://localhost:8000/text-to-image', { prompt: obj.prompt });
+        res = await axios.post(`${backendURL}/text-to-image`, { prompt: obj.prompt });
       } else { // only image
-        res = await axios.post('http://localhost:8000/creativeimage', { image: obj.image.replace(/^data:image\/\w+;base64,/, "") })
+        res = await axios.post(`${backendURL}/creativeimage`, { image: obj.image.replace(/^data:image\/\w+;base64,/, "") })
       }
 
       setData(prev => [...prev, res.data.image])
-      console.log(res.data);
+      scrollTop();
       setLoader(false)
     } catch (error) {
       setLoader(false)
@@ -135,7 +107,12 @@ const PixoraAI = ({setAi}) => {
         newSet.add(idx);
         return newSet;
       })
-      const res = await axios.post('http://localhost:8000/uploadimage', { base64Image, userId: "temp" });
+
+      if (user) {
+        const res = await axios.post(`${backendURL}/uploadimage`, { base64Image, userId: user.uid });
+      }else{
+        notify("Please Login to save your collection" , "success");
+      }
 
       setCollectionLoaderSet(prev => {
         const newSet = new Set(prev);
@@ -163,11 +140,11 @@ const PixoraAI = ({setAi}) => {
             Pixora AI
           </div>
         </div>
-        <div onClick={()=>{setAi(false)}}><i className="ri-close-line"></i></div>
+        <div onClick={() => { setAi(false) }}><i className="ri-close-line"></i></div>
       </div>
     </div>
     <div className="bottom">
-      {data.length !== 0 && <div className="main">
+      {data.length !== 0 && <div className="main" ref={refMain}>
         {data.map((ele, idx) => {
           if (idx % 2 === 0) {
             return <div className="right" key={idx}>
